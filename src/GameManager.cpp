@@ -1,5 +1,12 @@
 #include "GameManager.h"
 
+GameManager::GameManager()
+{
+    boardA = Board();
+    boardB = Board();
+    turn=true;
+}
+
 bool GameManager::is_over()
 {
     if(boardA.is_over() || boardB.is_over()){
