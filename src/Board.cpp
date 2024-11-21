@@ -55,8 +55,8 @@ void Board::display()
                     cout << " |  ";
                 }
             }
-            cout<<endl;
         }
+        cout<<endl;
     }
 }
 
