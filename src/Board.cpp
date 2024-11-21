@@ -2,10 +2,15 @@
 #include <iostream>
 using namespace std;
 
+Board::Board()
+{
+
+}
+
 bool Board::is_over()
 {
-    for(Ship ship in ships){
-        if(!ship.is_dead()){
+    for(list<Ship>::iterator it=ships.begin(); it!=ships.end(); it++){
+        if(!(*it)->is_dead()){
             return false;
         }
     }

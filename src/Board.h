@@ -1,9 +1,10 @@
 #include "Ship.h"
-#include "BoatTypes.h"
+#include "ShipTypes.h"
+#include <list>
 
 class Board{
 public :
-    ships : list<Ship>;
+    list<Ship> ships;
 
     Board();
     bool is_over();
