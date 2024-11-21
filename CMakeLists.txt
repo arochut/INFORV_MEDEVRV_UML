@@ -16,6 +16,10 @@ project ("Battleships")
 # Add source to this project's executable.
 add_executable (Battleships "Battleships.cpp" "Battleships.h")
 
+#include dir src and subdirectories
+target_include_directories(Battleships PRIVATE src)
+target_include_directories(Battleships PRIVATE src/Enums)
+
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET Battleships PROPERTY CXX_STANDARD 20)
