@@ -21,7 +21,7 @@ bool Ship::is_dead() {
 }
 
 bool Ship::occupies(int x, int y) {
-    if (dir == Direction::Horizontal) {
+    if (dir == Direction::Vertical) {
         if (x < x_start || x >= x_start + size) {
             return false;
         }
