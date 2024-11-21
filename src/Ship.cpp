@@ -1,4 +1,6 @@
 #include "Ship.h"
+using namespace std;
+
 
 Ship::Ship(int x, int y, int size, Direction dir, string name) {
     x_start = x;
