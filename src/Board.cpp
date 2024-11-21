@@ -10,7 +10,7 @@ Board::Board()
 bool Board::is_over()
 {
     for(list<Ship>::iterator it=ships.begin(); it!=ships.end(); it++){
-        if(!(*it)->is_dead()){
+        if(!(*it).is_dead()){
             return false;
         }
     }
