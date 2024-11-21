@@ -45,3 +45,63 @@ bool Ship::hit(int x, int y) {
     }
     return true;
 }
+
+int Ship::get_x_start()
+{
+    return x_start;
+}
+
+void Ship::set_x_start(int _x)
+{
+    x_start=_x;
+}
+
+int Ship::get_y_start()
+{
+    return y_start;
+}
+
+void Ship::set_y_start(int _y)
+{
+    y_start=_y;
+}
+
+int Ship::get_size()
+{
+    return size;
+}
+
+void Ship::set_size(int _size)
+{
+    size=_size;
+}
+
+Direction Ship::get_dir()
+{
+    return dir;
+}
+
+void Ship::set_dir(Direction _dir)
+{
+    dir=_dir;
+}
+
+string Ship::get_name()
+{
+    return name;
+}
+
+void Ship::set_name(string _name)
+{
+    name=_name;
+}
+
+vector<bool> Ship::get_hits()
+{
+    return hits;
+}
+
+void Ship::set_hits(vector<bool> _hits)
+{
+    hits=_hits;
+}
