@@ -3,7 +3,6 @@
 #include "Direction.h"
 #include <vector>
 #include <string>
-#include <pair>
 
 class Ship {
 
@@ -22,6 +21,6 @@ public:
     bool is_dead();
     bool occupies(int x, int y);
     bool hit(int x, int y);
-    
+
     
 }
