@@ -1,3 +1,5 @@
+#include "Ship.h"
+
 Ship::Ship(int x, int y, int size, Direction dir, string name) {
     x_start = x;
     y_start = y;
