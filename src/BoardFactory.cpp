@@ -46,12 +46,6 @@ void BoardFactory::place_ship(Board& board, ShipType type) {
             }
         }
     }
-
-    
-    
-
-}
-
 void BoardFactory::place_all_ships(Board& board) {
     for (int i = 0; i < ShipTypes::SHIP_COUNT; i++) {
         place_ship(board, ShipTypes::SHIP_TYPES[i]);

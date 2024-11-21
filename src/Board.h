@@ -12,4 +12,7 @@ public :
     void display();
     list<Ship> get_ships();
     void set_ships(list<Ship> _ships);
+    void addShip(Ship* ship);
+    bool can_place_ship(int x, int y, int size, Direction dir);
+    static pair<int, int> get_coords(string coord);
 };
