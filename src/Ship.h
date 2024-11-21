@@ -23,4 +23,4 @@ public:
     bool hit(int x, int y);
 
     
-}
+};
