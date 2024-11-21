@@ -12,13 +12,16 @@ endif()
 
 project ("Battleships")
 
+include_directories(src)
+include_directories(src/Enums)
+
+# Collect all source files in src and src/Enums
+file(GLOB_RECURSE SOURCES "src/*.cpp" "src/Enums/*.cpp" "src/*.h" "src/Enums/*.h")
+
 
 # Add source to this project's executable.
-add_executable (Battleships "Battleships.cpp" "Battleships.h")
+add_executable (Battleships ${SOURCES})
 
-#include dir src and subdirectories
-target_include_directories(Battleships PRIVATE src)
-target_include_directories(Battleships PRIVATE src/Enums)
 
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)

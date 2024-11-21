@@ -3,13 +3,16 @@
 #define BOARD_H
 
 #include "Ship.h"
-#include "ShipTypes.h"
+#include "Enums/ShipTypes.h"
 #include <list>
+#include <iostream>
 
 class Board{
     list<Ship> ships;
+    
 public :
     Board();
+
     bool is_over();
     bool shoot(int x, int y);
     bool case_vide(int x, int y);
