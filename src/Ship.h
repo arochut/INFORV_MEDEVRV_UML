@@ -1,8 +1,14 @@
 
 
+#ifndef SHIP_H
+#define SHIP_H
+
 #include "Enums/Direction.h"
 #include <vector>
 #include <string>
+
+
+using namespace std;
 
 class Ship {
 
@@ -35,3 +41,5 @@ public:
     vector<bool> get_hits();
     void set_hits(vector<bool> _hits);
 };
+
+#endif

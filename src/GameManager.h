@@ -1,3 +1,7 @@
+
+#ifndef GAMEMANAGER_H
+#define GAMEMANAGER_H
+
 #include "Board.h"
 
 
@@ -17,3 +21,5 @@ public:
     void set_boardA(bool _turn);
 
 };
+
+#endif

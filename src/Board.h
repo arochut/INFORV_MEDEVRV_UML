@@ -1,3 +1,7 @@
+
+#ifndef BOARD_H
+#define BOARD_H
+
 #include "Ship.h"
 #include "ShipTypes.h"
 #include <list>
@@ -16,3 +20,5 @@ public :
     bool can_place_ship(int x, int y, int size, Direction dir);
     static pair<int, int> get_coords(string coord);
 };
+
+#endif // BOARD_H

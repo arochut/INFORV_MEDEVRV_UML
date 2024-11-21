@@ -5,6 +5,11 @@
 #include <string>
 using namespace std;
 
+struct ShipType {
+    string name;
+    int size; 
+};
+
 class ShipTypes
 {
     
@@ -20,11 +25,6 @@ class ShipTypes
         static const ShipType SHIP_TYPES[SHIP_COUNT];
 
     
-};
-
-struct ShipType {
-    string name;
-    int size; 
 };
 
 #endif // ShipTypes_H
