@@ -21,9 +21,15 @@ bool Board::shoot(int x, int y)
 {
     for(list<Ship>::iterator it=ships.begin(); it!=ships.end(); it++){
         if((*it).hit(x,y)){
+            if (it->is_dead()){
+                cout << "Touché-Coulé" << endl;
+            } else {
+                cout << "Touché" << endl;
+            }
             return true;
         }
     }
+    cout << "Raté" << endl;
     return false;
 }
 
@@ -44,16 +50,19 @@ void Board::display()
     for(int i=1; i<11;i++){
         cout<< grid[i-1];
         for(int j=1; j<11;j++){
+            bool is_occupied = false;
             for (list<Ship>::iterator it=ships.begin(); it!=ships.end(); it++){
                 if(it->occupies(i,j)){
+                    is_occupied = true;
                     if((it->is_hit(i,j))){
                         cout<<" | X";
                     }else {
                         cout<<" | S";
                     }
-                } else {
-                    cout << " |  ";
                 }
+            }
+            if (!is_occupied){
+                cout<<" |  ";
             }
         }
         cout<<endl;

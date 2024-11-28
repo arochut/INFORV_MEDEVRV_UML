@@ -1,12 +1,12 @@
 
 #include "Battleships.h"
+#include "BoardFactory.h"
+#include "GameManager.h"
 
 int main() {
-	
-	Board boardA = Board();
-	Ship* ship = new Ship(5, 5, 3, Direction::Horizontal, "Anatole");
-	boardA.addShip(ship);
-	boardA.display();
+	BoardFactory boardFactory = BoardFactory();
+	Board boardA = boardFactory.create_board();
+	Board boardB = boardFactory.create_board();
 
 	return 0;
 }

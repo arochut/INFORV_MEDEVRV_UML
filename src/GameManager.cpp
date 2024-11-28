@@ -15,6 +15,29 @@ bool GameManager::is_over()
     return false;
 }
 
+void GameManager::play_turn()
+{
+    string bullet;
+    while (!is_over()){
+        if (turn){
+            cout << "Au tour du joueur A"<< endl;
+        }else {
+            cout << "Au tour du joueur B"<< endl;
+        }
+        cout << "Entrer la case visée (ex : D4)" <<endl;
+        cin >> bullet;
+        int x = bullet[0] - 'A' + 1;
+        int y = bullet[1] - '0';
+        if (turn){
+            boardB.shoot(x,y);
+        }else {
+            boardA.shoot(x,y);
+        }
+        cout << "Fin du tour"<< endl;
+        turn=!turn;
+    }
+}
+
 Board GameManager::get_boardA()
 {
     return boardA;

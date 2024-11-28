@@ -13,6 +13,7 @@ class GameManager{
 public:
     GameManager();
     bool is_over();
+    void play_turn();
     Board get_boardA();
     void set_boardA(Board _boardA);
     Board get_boardB();
