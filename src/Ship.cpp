@@ -46,6 +46,22 @@ bool Ship::hit(int x, int y) {
     return true;
 }
 
+bool Ship::is_hit(int x, int y)
+{
+    if (!occupies(x, y)) {
+        return false;
+    }
+    if (dir == Direction::Horizontal and hits[x - x_start] == true) {
+        return true;
+    } else {
+        if (hits[y - y_start] == true){
+            return true;
+        }
+    }
+    return false;
+}
+
+
 int Ship::get_x_start()
 {
     return x_start;

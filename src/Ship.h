@@ -27,7 +27,7 @@ public:
     bool is_dead();
     bool occupies(int x, int y);
     bool hit(int x, int y);
-
+    bool is_hit(int x, int y);
     int get_x_start();
     void set_x_start(int _x);
     int get_y_start();

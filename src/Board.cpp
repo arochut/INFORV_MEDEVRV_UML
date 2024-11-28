@@ -46,7 +46,7 @@ void Board::display()
         for(int j=1; j<11;j++){
             for (list<Ship>::iterator it=ships.begin(); it!=ships.end(); it++){
                 if(it->occupies(i,j)){
-                    if((it->get_hits())[j-it->get_x_start() + i-it->get_y_start()]){
+                    if((it->is_hit(i,j))){
                         cout<<" | X";
                     }else {
                         cout<<" | S";
