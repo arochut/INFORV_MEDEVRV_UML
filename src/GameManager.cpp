@@ -21,8 +21,16 @@ void GameManager::play_turn()
     while (!is_over()){
         if (a_to_play){
             cout << "Au tour du joueur A"<< endl;
+            cout << "Ton platau"<< endl;
+            boardA.display_own();
+            cout << "Le platau adverse"<< endl;
+            boardB.display_for_opponent();
         }else {
             cout << "Au tour du joueur B"<< endl;
+            cout << "Ton platau"<< endl;
+            boardB.display_own();
+            cout << "Le platau adverse"<< endl;
+            boardA.display_for_opponent();
         }
         cout << "Entrer la case visée (ex : D4)" <<endl;
         cin >> bullet;
