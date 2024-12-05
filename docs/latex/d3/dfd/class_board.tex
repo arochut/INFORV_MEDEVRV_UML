@@ -1,41 +1,186 @@
 \doxysection{Board Class Reference}
 \hypertarget{class_board}{}\label{class_board}\index{Board@{Board}}
+
+
+Class that represents a board.  
+
+
+
+
+{\ttfamily \#include $<$Board.\+h$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_board_a7e1a5af0dda9fd06eff66b2c2d0a0bbc}\label{class_board_a7e1a5af0dda9fd06eff66b2c2d0a0bbc} 
-bool {\bfseries is\+\_\+over} ()
-\item 
-\Hypertarget{class_board_a9ac73a1617135ad5affd1768b7f37c67}\label{class_board_a9ac73a1617135ad5affd1768b7f37c67} 
-bool {\bfseries shoot} (int x, int y)
-\item 
-\Hypertarget{class_board_a4973a82918d1650b65f2205b0bc15625}\label{class_board_a4973a82918d1650b65f2205b0bc15625} 
-bool {\bfseries case\+\_\+vide} (int x, int y)
-\item 
+\Hypertarget{class_board_a9ee491d4fea680cf69b033374a9fdfcb}\label{class_board_a9ee491d4fea680cf69b033374a9fdfcb} 
+{\bfseries Board} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_board}{Board} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_board_a7e1a5af0dda9fd06eff66b2c2d0a0bbc}{is\+\_\+over}} ()
+\begin{DoxyCompactList}\small\item\em Check if the game is over. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_board_a9ac73a1617135ad5affd1768b7f37c67}{shoot}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Shoot at a certain position. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_board_a4973a82918d1650b65f2205b0bc15625}{case\+\_\+vide}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Check if a certain position is empty. \end{DoxyCompactList}\item 
 \Hypertarget{class_board_aa8f12f645cbd3ce67bcedf84e362ddb5}\label{class_board_aa8f12f645cbd3ce67bcedf84e362ddb5} 
 void {\bfseries display\+\_\+own} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Display the board for the player. \end{DoxyCompactList}\item 
 \Hypertarget{class_board_a0d6f8d09e71cf589e7ace0e1c2e2bf2d}\label{class_board_a0d6f8d09e71cf589e7ace0e1c2e2bf2d} 
 void {\bfseries display\+\_\+for\+\_\+opponent} ()
-\item 
-\Hypertarget{class_board_a7ab05ceeaab301f70dda313c62d003d3}\label{class_board_a7ab05ceeaab301f70dda313c62d003d3} 
-list$<$ \mbox{\hyperlink{class_ship}{Ship}} $>$ {\bfseries get\+\_\+ships} ()
-\item 
-\Hypertarget{class_board_acd9bad766a00de24f4c5232b6334ecf2}\label{class_board_acd9bad766a00de24f4c5232b6334ecf2} 
-void {\bfseries set\+\_\+ships} (list$<$ \mbox{\hyperlink{class_ship}{Ship}} $>$ \+\_\+ships)
-\item 
-\Hypertarget{class_board_a7cbd4f42a1f08b32a56a039f9f8bd9ae}\label{class_board_a7cbd4f42a1f08b32a56a039f9f8bd9ae} 
-void {\bfseries add\+\_\+ship} (\mbox{\hyperlink{class_ship}{Ship}} \texorpdfstring{$\ast$}{*}ship)
-\item 
-\Hypertarget{class_board_af696c05f7c21ef9c81069def67aa73d3}\label{class_board_af696c05f7c21ef9c81069def67aa73d3} 
-bool {\bfseries can\+\_\+place\+\_\+ship} (int x, int y, int size, Direction dir)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Display the board for the opponent (without ships displayed, only shots) \end{DoxyCompactList}\item 
+list$<$ \mbox{\hyperlink{class_ship}{Ship}} $>$ \mbox{\hyperlink{class_board_a7ab05ceeaab301f70dda313c62d003d3}{get\+\_\+ships}} ()
+\begin{DoxyCompactList}\small\item\em Get the ships object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_acd9bad766a00de24f4c5232b6334ecf2}{set\+\_\+ships}} (list$<$ \mbox{\hyperlink{class_ship}{Ship}} $>$ \+\_\+ships)
+\begin{DoxyCompactList}\small\item\em Set the ships object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_a7cbd4f42a1f08b32a56a039f9f8bd9ae}{add\+\_\+ship}} (\mbox{\hyperlink{class_ship}{Ship}} \texorpdfstring{$\ast$}{*}ship)
+\begin{DoxyCompactList}\small\item\em Add a ship to the board. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_board_af696c05f7c21ef9c81069def67aa73d3}{can\+\_\+place\+\_\+ship}} (int x, int y, int size, Direction dir)
+\begin{DoxyCompactList}\small\item\em Check if a ship can be placed at a certain position. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_board_a401955ce815582367c56fe855b6349a7}\label{class_board_a401955ce815582367c56fe855b6349a7} 
-static pair$<$ int, int $>$ {\bfseries get\+\_\+coords} (string coord)
-\end{DoxyCompactItemize}
+static pair$<$ int, int $>$ \mbox{\hyperlink{class_board_a401955ce815582367c56fe855b6349a7}{get\+\_\+coords}} (string coord)
+\begin{DoxyCompactList}\small\item\em Get a pair of coordinates from a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that represents a board. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_board_a7cbd4f42a1f08b32a56a039f9f8bd9ae}\index{Board@{Board}!add\_ship@{add\_ship}}
+\index{add\_ship@{add\_ship}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{add\_ship()}{add\_ship()}}
+{\footnotesize\ttfamily \label{class_board_a7cbd4f42a1f08b32a56a039f9f8bd9ae} 
+void Board\+::add\+\_\+ship (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ship}{Ship}} \texorpdfstring{$\ast$}{*}}]{ship}{}\end{DoxyParamCaption})}
+
+
+
+Add a ship to the board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ship} & the ship to add \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_board_af696c05f7c21ef9c81069def67aa73d3}\index{Board@{Board}!can\_place\_ship@{can\_place\_ship}}
+\index{can\_place\_ship@{can\_place\_ship}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{can\_place\_ship()}{can\_place\_ship()}}
+{\footnotesize\ttfamily \label{class_board_af696c05f7c21ef9c81069def67aa73d3} 
+bool Board\+::can\+\_\+place\+\_\+ship (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{size}{, }\item[{Direction}]{dir}{}\end{DoxyParamCaption})}
+
+
+
+Check if a ship can be placed at a certain position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & the x coordinate of the position \\
+\hline
+{\em y} & the y coordinate of the position \\
+\hline
+{\em size} & the size of the ship \\
+\hline
+{\em dir} & the direction of the ship \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_board_a4973a82918d1650b65f2205b0bc15625}\index{Board@{Board}!case\_vide@{case\_vide}}
+\index{case\_vide@{case\_vide}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{case\_vide()}{case\_vide()}}
+{\footnotesize\ttfamily \label{class_board_a4973a82918d1650b65f2205b0bc15625} 
+bool Board\+::case\+\_\+vide (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Check if a certain position is empty. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & the x coordinate of the position \\
+\hline
+{\em y} & the y coordinate of the position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the position is empty, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_board_a401955ce815582367c56fe855b6349a7}\index{Board@{Board}!get\_coords@{get\_coords}}
+\index{get\_coords@{get\_coords}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{get\_coords()}{get\_coords()}}
+{\footnotesize\ttfamily \label{class_board_a401955ce815582367c56fe855b6349a7} 
+pair$<$ int, int $>$ Board\+::get\+\_\+coords (\begin{DoxyParamCaption}\item[{string}]{coord}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get a pair of coordinates from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em coord} & the string to convert (ex \+: "{}\+D4"{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pair$<$int, int$>$ the pair of coordinates ( "{}\+D4"{} -\/\texorpdfstring{$>$}{>} (4,4) ) 
+\end{DoxyReturn}
+\Hypertarget{class_board_a7ab05ceeaab301f70dda313c62d003d3}\index{Board@{Board}!get\_ships@{get\_ships}}
+\index{get\_ships@{get\_ships}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{get\_ships()}{get\_ships()}}
+{\footnotesize\ttfamily \label{class_board_a7ab05ceeaab301f70dda313c62d003d3} 
+list$<$ \mbox{\hyperlink{class_ship}{Ship}} $>$ Board\+::get\+\_\+ships (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the ships object. 
+
+\begin{DoxyReturn}{Returns}
+list$<$\+Ship$>$ the list of ships on the board 
+\end{DoxyReturn}
+\Hypertarget{class_board_a7e1a5af0dda9fd06eff66b2c2d0a0bbc}\index{Board@{Board}!is\_over@{is\_over}}
+\index{is\_over@{is\_over}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{is\_over()}{is\_over()}}
+{\footnotesize\ttfamily \label{class_board_a7e1a5af0dda9fd06eff66b2c2d0a0bbc} 
+bool Board\+::is\+\_\+over (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Check if the game is over. 
+
+\begin{DoxyReturn}{Returns}
+true if the game is over, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_board_acd9bad766a00de24f4c5232b6334ecf2}\index{Board@{Board}!set\_ships@{set\_ships}}
+\index{set\_ships@{set\_ships}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{set\_ships()}{set\_ships()}}
+{\footnotesize\ttfamily \label{class_board_acd9bad766a00de24f4c5232b6334ecf2} 
+void Board\+::set\+\_\+ships (\begin{DoxyParamCaption}\item[{list$<$ \mbox{\hyperlink{class_ship}{Ship}} $>$}]{\+\_\+ships}{}\end{DoxyParamCaption})}
+
+
+
+Set the ships object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+ships} & the list of ships to set as ships \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_board_a9ac73a1617135ad5affd1768b7f37c67}\index{Board@{Board}!shoot@{shoot}}
+\index{shoot@{shoot}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{shoot()}{shoot()}}
+{\footnotesize\ttfamily \label{class_board_a9ac73a1617135ad5affd1768b7f37c67} 
+bool Board\+::shoot (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Shoot at a certain position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & the x coordinate of the position \\
+\hline
+{\em y} & the y coordinate of the position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if a ship is hit at the position, false otherwise 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

@@ -104,42 +104,79 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">using namespace </span>std;</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../d3/d1d/class_ship.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="../../d3/d1d/class_ship.html">Ship</a> {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">int</span> x_start;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">int</span> y_start;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">int</span> size;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    Direction dir;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">string</span> name;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    vector&lt;bool&gt; hits;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="comment">// int hit_score;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_class" href="../../d3/d1d/class_ship.html">Ship</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> size, Direction dir, <span class="keywordtype">string</span> name);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">bool</span> is_dead();</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">bool</span> occupies(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">bool</span> hit(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">bool</span> is_hit(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">int</span> get_x_start();</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> set_x_start(<span class="keywordtype">int</span> _x);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">int</span> get_y_start();</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> set_y_start(<span class="keywordtype">int</span> _y);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">int</span> get_size();</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> set_size(<span class="keywordtype">int</span> _size);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    Direction get_dir();</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> set_dir(Direction _dir);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">string</span> get_name();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> set_name(<span class="keywordtype">string</span> _name);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    vector&lt;bool&gt; get_hits();</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> set_hits(vector&lt;bool&gt; _hits);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>};</div>
-</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d3/d1d/class_ship.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="../../d3/d1d/class_ship.html">Ship</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">int</span> x_start;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">int</span> y_start;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">int</span> size;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    Direction dir;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">string</span> name;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    vector&lt;bool&gt; hits;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">// int hit_score;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_function" href="../../d3/d1d/class_ship.html#a44897688c0a5afcbb99b6ae4d2cf93c3">Ship</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> size, Direction dir, <span class="keywordtype">string</span> name);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_ship_html"><div class="ttname"><a href="../../d3/d1d/class_ship.html">Ship</a></div><div class="ttdef"><b>Definition</b> Ship.h:13</div></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d3/d1d/class_ship.html#af9ffdde0d9a779d60aec17c5ca033bcd">is_dead</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d3/d1d/class_ship.html#ae11cb9ef580f3f8d89a0b369ef2af73b">occupies</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d3/d1d/class_ship.html#a76db58fedc260807b900ff48176b0109">hit</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d3/d1d/class_ship.html#a04c16f55d1d8eae52ce7cc3d68246d35">is_hit</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d3/d1d/class_ship.html#ad90a079fca601f0148b3cc051ec2294a">get_x_start</a>();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d1d/class_ship.html#ab098c1bc30803a6f3982919f78dce214">set_x_start</a>(<span class="keywordtype">int</span> _x);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d3/d1d/class_ship.html#af4d398c85f8c092e1c847e6eb32acaa6">get_y_start</a>();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d1d/class_ship.html#af924a2b439d9686b2dff922a45fd72cf">set_y_start</a>(<span class="keywordtype">int</span> _y);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d3/d1d/class_ship.html#afe7fd5445de926a8dc0c2915422fc7ae">get_size</a>();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d1d/class_ship.html#a0d184845caddc7801a6cc094ef8073ce">set_size</a>(<span class="keywordtype">int</span> _size);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    Direction <a class="code hl_function" href="../../d3/d1d/class_ship.html#af9298e7b899c60e9688657581fb520ec">get_dir</a>();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d1d/class_ship.html#adbec32e7e25f70af07d4ab99e5d4a1dc">set_dir</a>(Direction _dir);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="../../d3/d1d/class_ship.html#a4f902c89163123edb3413101e47d241c">get_name</a>();</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d1d/class_ship.html#a691b853d635d1ee241051525dd24d878">set_name</a>(<span class="keywordtype">string</span> _name);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    vector&lt;bool&gt; <a class="code hl_function" href="../../d3/d1d/class_ship.html#ae1e06cff98d9e411837914054d3e7294">get_hits</a>();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d1d/class_ship.html#aefb9601e6363830dd11316525cb4547a">set_hits</a>(vector&lt;bool&gt; _hits);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>};</div>
+</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_ship_html"><div class="ttname"><a href="../../d3/d1d/class_ship.html">Ship</a></div><div class="ttdoc">Class that represents a ship.</div><div class="ttdef"><b>Definition</b> Ship.h:15</div></div>
+<div class="ttc" id="aclass_ship_html_a04c16f55d1d8eae52ce7cc3d68246d35"><div class="ttname"><a href="../../d3/d1d/class_ship.html#a04c16f55d1d8eae52ce7cc3d68246d35">Ship::is_hit</a></div><div class="ttdeci">bool is_hit(int x, int y)</div><div class="ttdoc">Check if the ship is hit at a certain position.</div><div class="ttdef"><b>Definition</b> Ship.cpp:49</div></div>
+<div class="ttc" id="aclass_ship_html_a0d184845caddc7801a6cc094ef8073ce"><div class="ttname"><a href="../../d3/d1d/class_ship.html#a0d184845caddc7801a6cc094ef8073ce">Ship::set_size</a></div><div class="ttdeci">void set_size(int _size)</div><div class="ttdoc">Set the size object.</div><div class="ttdef"><b>Definition</b> Ship.cpp:90</div></div>
+<div class="ttc" id="aclass_ship_html_a44897688c0a5afcbb99b6ae4d2cf93c3"><div class="ttname"><a href="../../d3/d1d/class_ship.html#a44897688c0a5afcbb99b6ae4d2cf93c3">Ship::Ship</a></div><div class="ttdeci">Ship(int x, int y, int size, Direction dir, string name)</div><div class="ttdoc">Constructor for ship.</div><div class="ttdef"><b>Definition</b> Ship.cpp:5</div></div>
+<div class="ttc" id="aclass_ship_html_a4f902c89163123edb3413101e47d241c"><div class="ttname"><a href="../../d3/d1d/class_ship.html#a4f902c89163123edb3413101e47d241c">Ship::get_name</a></div><div class="ttdeci">string get_name()</div><div class="ttdoc">Get the name object.</div><div class="ttdef"><b>Definition</b> Ship.cpp:105</div></div>
+<div class="ttc" id="aclass_ship_html_a691b853d635d1ee241051525dd24d878"><div class="ttname"><a href="../../d3/d1d/class_ship.html#a691b853d635d1ee241051525dd24d878">Ship::set_name</a></div><div class="ttdeci">void set_name(string _name)</div><div class="ttdoc">Set the name object.</div><div class="ttdef"><b>Definition</b> Ship.cpp:110</div></div>
+<div class="ttc" id="aclass_ship_html_a76db58fedc260807b900ff48176b0109"><div class="ttname"><a href="../../d3/d1d/class_ship.html#a76db58fedc260807b900ff48176b0109">Ship::hit</a></div><div class="ttdeci">bool hit(int x, int y)</div><div class="ttdoc">Tries to hit at a certain position, if the ship occupies the position, the ship is hit.</div><div class="ttdef"><b>Definition</b> Ship.cpp:37</div></div>
+<div class="ttc" id="aclass_ship_html_ab098c1bc30803a6f3982919f78dce214"><div class="ttname"><a href="../../d3/d1d/class_ship.html#ab098c1bc30803a6f3982919f78dce214">Ship::set_x_start</a></div><div class="ttdeci">void set_x_start(int _x)</div><div class="ttdoc">Set the x_start object.</div><div class="ttdef"><b>Definition</b> Ship.cpp:70</div></div>
+<div class="ttc" id="aclass_ship_html_ad90a079fca601f0148b3cc051ec2294a"><div class="ttname"><a href="../../d3/d1d/class_ship.html#ad90a079fca601f0148b3cc051ec2294a">Ship::get_x_start</a></div><div class="ttdeci">int get_x_start()</div><div class="ttdoc">Get the x_start object.</div><div class="ttdef"><b>Definition</b> Ship.cpp:65</div></div>
+<div class="ttc" id="aclass_ship_html_adbec32e7e25f70af07d4ab99e5d4a1dc"><div class="ttname"><a href="../../d3/d1d/class_ship.html#adbec32e7e25f70af07d4ab99e5d4a1dc">Ship::set_dir</a></div><div class="ttdeci">void set_dir(Direction _dir)</div><div class="ttdoc">Set the dir object.</div><div class="ttdef"><b>Definition</b> Ship.cpp:100</div></div>
+<div class="ttc" id="aclass_ship_html_ae11cb9ef580f3f8d89a0b369ef2af73b"><div class="ttname"><a href="../../d3/d1d/class_ship.html#ae11cb9ef580f3f8d89a0b369ef2af73b">Ship::occupies</a></div><div class="ttdeci">bool occupies(int x, int y)</div><div class="ttdoc">Check if the ship occupies a certain position.</div><div class="ttdef"><b>Definition</b> Ship.cpp:23</div></div>
+<div class="ttc" id="aclass_ship_html_ae1e06cff98d9e411837914054d3e7294"><div class="ttname"><a href="../../d3/d1d/class_ship.html#ae1e06cff98d9e411837914054d3e7294">Ship::get_hits</a></div><div class="ttdeci">vector&lt; bool &gt; get_hits()</div><div class="ttdoc">Get the hits object.</div><div class="ttdef"><b>Definition</b> Ship.cpp:115</div></div>
+<div class="ttc" id="aclass_ship_html_aefb9601e6363830dd11316525cb4547a"><div class="ttname"><a href="../../d3/d1d/class_ship.html#aefb9601e6363830dd11316525cb4547a">Ship::set_hits</a></div><div class="ttdeci">void set_hits(vector&lt; bool &gt; _hits)</div><div class="ttdoc">Set the hits object.</div><div class="ttdef"><b>Definition</b> Ship.cpp:120</div></div>
+<div class="ttc" id="aclass_ship_html_af4d398c85f8c092e1c847e6eb32acaa6"><div class="ttname"><a href="../../d3/d1d/class_ship.html#af4d398c85f8c092e1c847e6eb32acaa6">Ship::get_y_start</a></div><div class="ttdeci">int get_y_start()</div><div class="ttdoc">Get the y_start object.</div><div class="ttdef"><b>Definition</b> Ship.cpp:75</div></div>
+<div class="ttc" id="aclass_ship_html_af924a2b439d9686b2dff922a45fd72cf"><div class="ttname"><a href="../../d3/d1d/class_ship.html#af924a2b439d9686b2dff922a45fd72cf">Ship::set_y_start</a></div><div class="ttdeci">void set_y_start(int _y)</div><div class="ttdoc">Set the y_start object.</div><div class="ttdef"><b>Definition</b> Ship.cpp:80</div></div>
+<div class="ttc" id="aclass_ship_html_af9298e7b899c60e9688657581fb520ec"><div class="ttname"><a href="../../d3/d1d/class_ship.html#af9298e7b899c60e9688657581fb520ec">Ship::get_dir</a></div><div class="ttdeci">Direction get_dir()</div><div class="ttdoc">Get the dir object.</div><div class="ttdef"><b>Definition</b> Ship.cpp:95</div></div>
+<div class="ttc" id="aclass_ship_html_af9ffdde0d9a779d60aec17c5ca033bcd"><div class="ttname"><a href="../../d3/d1d/class_ship.html#af9ffdde0d9a779d60aec17c5ca033bcd">Ship::is_dead</a></div><div class="ttdeci">bool is_dead()</div><div class="ttdoc">Check if the ship is dead.</div><div class="ttdef"><b>Definition</b> Ship.cpp:14</div></div>
+<div class="ttc" id="aclass_ship_html_afe7fd5445de926a8dc0c2915422fc7ae"><div class="ttname"><a href="../../d3/d1d/class_ship.html#afe7fd5445de926a8dc0c2915422fc7ae">Ship::get_size</a></div><div class="ttdeci">int get_size()</div><div class="ttdoc">Get the size object.</div><div class="ttdef"><b>Definition</b> Ship.cpp:85</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

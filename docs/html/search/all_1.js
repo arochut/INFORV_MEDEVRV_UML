@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['gamemanager_0',['GameManager',['../db/d10/class_game_manager.html',1,'']]]
+  ['board_0',['Board',['../d3/dfd/class_board.html',1,'Board'],['../d3/dfd/class_board.html#a9ee491d4fea680cf69b033374a9fdfcb',1,'Board::Board()']]],
+  ['boardfactory_1',['BoardFactory',['../da/d90/class_board_factory.html',1,'BoardFactory'],['../da/d90/class_board_factory.html#a8c882a7a68d2ecc6ea0dfb010e6056f3',1,'BoardFactory::BoardFactory()']]]
 ];

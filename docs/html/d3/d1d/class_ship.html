@@ -91,61 +91,501 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">Ship Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class that represents a ship.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d5/de7/_ship_8h_source.html">Ship.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a44897688c0a5afcbb99b6ae4d2cf93c3" id="r_a44897688c0a5afcbb99b6ae4d2cf93c3"><td class="memItemLeft" align="right" valign="top"><a id="a44897688c0a5afcbb99b6ae4d2cf93c3" name="a44897688c0a5afcbb99b6ae4d2cf93c3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Ship</b> (int x, int y, int size, Direction dir, string name)</td></tr>
+<tr class="memitem:a44897688c0a5afcbb99b6ae4d2cf93c3" id="r_a44897688c0a5afcbb99b6ae4d2cf93c3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44897688c0a5afcbb99b6ae4d2cf93c3">Ship</a> (int x, int y, int size, Direction dir, string name)</td></tr>
+<tr class="memdesc:a44897688c0a5afcbb99b6ae4d2cf93c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for ship.  <br /></td></tr>
 <tr class="separator:a44897688c0a5afcbb99b6ae4d2cf93c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9ffdde0d9a779d60aec17c5ca033bcd" id="r_af9ffdde0d9a779d60aec17c5ca033bcd"><td class="memItemLeft" align="right" valign="top"><a id="af9ffdde0d9a779d60aec17c5ca033bcd" name="af9ffdde0d9a779d60aec17c5ca033bcd"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_dead</b> ()</td></tr>
+<tr class="memitem:af9ffdde0d9a779d60aec17c5ca033bcd" id="r_af9ffdde0d9a779d60aec17c5ca033bcd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9ffdde0d9a779d60aec17c5ca033bcd">is_dead</a> ()</td></tr>
+<tr class="memdesc:af9ffdde0d9a779d60aec17c5ca033bcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the ship is dead.  <br /></td></tr>
 <tr class="separator:af9ffdde0d9a779d60aec17c5ca033bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae11cb9ef580f3f8d89a0b369ef2af73b" id="r_ae11cb9ef580f3f8d89a0b369ef2af73b"><td class="memItemLeft" align="right" valign="top"><a id="ae11cb9ef580f3f8d89a0b369ef2af73b" name="ae11cb9ef580f3f8d89a0b369ef2af73b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>occupies</b> (int x, int y)</td></tr>
+<tr class="memitem:ae11cb9ef580f3f8d89a0b369ef2af73b" id="r_ae11cb9ef580f3f8d89a0b369ef2af73b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae11cb9ef580f3f8d89a0b369ef2af73b">occupies</a> (int x, int y)</td></tr>
+<tr class="memdesc:ae11cb9ef580f3f8d89a0b369ef2af73b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the ship occupies a certain position.  <br /></td></tr>
 <tr class="separator:ae11cb9ef580f3f8d89a0b369ef2af73b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76db58fedc260807b900ff48176b0109" id="r_a76db58fedc260807b900ff48176b0109"><td class="memItemLeft" align="right" valign="top"><a id="a76db58fedc260807b900ff48176b0109" name="a76db58fedc260807b900ff48176b0109"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>hit</b> (int x, int y)</td></tr>
+<tr class="memitem:a76db58fedc260807b900ff48176b0109" id="r_a76db58fedc260807b900ff48176b0109"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76db58fedc260807b900ff48176b0109">hit</a> (int x, int y)</td></tr>
+<tr class="memdesc:a76db58fedc260807b900ff48176b0109"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tries to hit at a certain position, if the ship occupies the position, the ship is hit.  <br /></td></tr>
 <tr class="separator:a76db58fedc260807b900ff48176b0109"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04c16f55d1d8eae52ce7cc3d68246d35" id="r_a04c16f55d1d8eae52ce7cc3d68246d35"><td class="memItemLeft" align="right" valign="top"><a id="a04c16f55d1d8eae52ce7cc3d68246d35" name="a04c16f55d1d8eae52ce7cc3d68246d35"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_hit</b> (int x, int y)</td></tr>
+<tr class="memitem:a04c16f55d1d8eae52ce7cc3d68246d35" id="r_a04c16f55d1d8eae52ce7cc3d68246d35"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04c16f55d1d8eae52ce7cc3d68246d35">is_hit</a> (int x, int y)</td></tr>
+<tr class="memdesc:a04c16f55d1d8eae52ce7cc3d68246d35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the ship is hit at a certain position.  <br /></td></tr>
 <tr class="separator:a04c16f55d1d8eae52ce7cc3d68246d35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad90a079fca601f0148b3cc051ec2294a" id="r_ad90a079fca601f0148b3cc051ec2294a"><td class="memItemLeft" align="right" valign="top"><a id="ad90a079fca601f0148b3cc051ec2294a" name="ad90a079fca601f0148b3cc051ec2294a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>get_x_start</b> ()</td></tr>
+<tr class="memitem:ad90a079fca601f0148b3cc051ec2294a" id="r_ad90a079fca601f0148b3cc051ec2294a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad90a079fca601f0148b3cc051ec2294a">get_x_start</a> ()</td></tr>
+<tr class="memdesc:ad90a079fca601f0148b3cc051ec2294a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the x_start object.  <br /></td></tr>
 <tr class="separator:ad90a079fca601f0148b3cc051ec2294a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab098c1bc30803a6f3982919f78dce214" id="r_ab098c1bc30803a6f3982919f78dce214"><td class="memItemLeft" align="right" valign="top"><a id="ab098c1bc30803a6f3982919f78dce214" name="ab098c1bc30803a6f3982919f78dce214"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_x_start</b> (int _x)</td></tr>
+<tr class="memitem:ab098c1bc30803a6f3982919f78dce214" id="r_ab098c1bc30803a6f3982919f78dce214"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab098c1bc30803a6f3982919f78dce214">set_x_start</a> (int _x)</td></tr>
+<tr class="memdesc:ab098c1bc30803a6f3982919f78dce214"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the x_start object.  <br /></td></tr>
 <tr class="separator:ab098c1bc30803a6f3982919f78dce214"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4d398c85f8c092e1c847e6eb32acaa6" id="r_af4d398c85f8c092e1c847e6eb32acaa6"><td class="memItemLeft" align="right" valign="top"><a id="af4d398c85f8c092e1c847e6eb32acaa6" name="af4d398c85f8c092e1c847e6eb32acaa6"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>get_y_start</b> ()</td></tr>
+<tr class="memitem:af4d398c85f8c092e1c847e6eb32acaa6" id="r_af4d398c85f8c092e1c847e6eb32acaa6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4d398c85f8c092e1c847e6eb32acaa6">get_y_start</a> ()</td></tr>
+<tr class="memdesc:af4d398c85f8c092e1c847e6eb32acaa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the y_start object.  <br /></td></tr>
 <tr class="separator:af4d398c85f8c092e1c847e6eb32acaa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af924a2b439d9686b2dff922a45fd72cf" id="r_af924a2b439d9686b2dff922a45fd72cf"><td class="memItemLeft" align="right" valign="top"><a id="af924a2b439d9686b2dff922a45fd72cf" name="af924a2b439d9686b2dff922a45fd72cf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_y_start</b> (int _y)</td></tr>
+<tr class="memitem:af924a2b439d9686b2dff922a45fd72cf" id="r_af924a2b439d9686b2dff922a45fd72cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af924a2b439d9686b2dff922a45fd72cf">set_y_start</a> (int _y)</td></tr>
+<tr class="memdesc:af924a2b439d9686b2dff922a45fd72cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the y_start object.  <br /></td></tr>
 <tr class="separator:af924a2b439d9686b2dff922a45fd72cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe7fd5445de926a8dc0c2915422fc7ae" id="r_afe7fd5445de926a8dc0c2915422fc7ae"><td class="memItemLeft" align="right" valign="top"><a id="afe7fd5445de926a8dc0c2915422fc7ae" name="afe7fd5445de926a8dc0c2915422fc7ae"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>get_size</b> ()</td></tr>
+<tr class="memitem:afe7fd5445de926a8dc0c2915422fc7ae" id="r_afe7fd5445de926a8dc0c2915422fc7ae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe7fd5445de926a8dc0c2915422fc7ae">get_size</a> ()</td></tr>
+<tr class="memdesc:afe7fd5445de926a8dc0c2915422fc7ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size object.  <br /></td></tr>
 <tr class="separator:afe7fd5445de926a8dc0c2915422fc7ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d184845caddc7801a6cc094ef8073ce" id="r_a0d184845caddc7801a6cc094ef8073ce"><td class="memItemLeft" align="right" valign="top"><a id="a0d184845caddc7801a6cc094ef8073ce" name="a0d184845caddc7801a6cc094ef8073ce"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_size</b> (int _size)</td></tr>
+<tr class="memitem:a0d184845caddc7801a6cc094ef8073ce" id="r_a0d184845caddc7801a6cc094ef8073ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d184845caddc7801a6cc094ef8073ce">set_size</a> (int _size)</td></tr>
+<tr class="memdesc:a0d184845caddc7801a6cc094ef8073ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the size object.  <br /></td></tr>
 <tr class="separator:a0d184845caddc7801a6cc094ef8073ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9298e7b899c60e9688657581fb520ec" id="r_af9298e7b899c60e9688657581fb520ec"><td class="memItemLeft" align="right" valign="top"><a id="af9298e7b899c60e9688657581fb520ec" name="af9298e7b899c60e9688657581fb520ec"></a>
-Direction&#160;</td><td class="memItemRight" valign="bottom"><b>get_dir</b> ()</td></tr>
+<tr class="memitem:af9298e7b899c60e9688657581fb520ec" id="r_af9298e7b899c60e9688657581fb520ec"><td class="memItemLeft" align="right" valign="top">Direction&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9298e7b899c60e9688657581fb520ec">get_dir</a> ()</td></tr>
+<tr class="memdesc:af9298e7b899c60e9688657581fb520ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the dir object.  <br /></td></tr>
 <tr class="separator:af9298e7b899c60e9688657581fb520ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbec32e7e25f70af07d4ab99e5d4a1dc" id="r_adbec32e7e25f70af07d4ab99e5d4a1dc"><td class="memItemLeft" align="right" valign="top"><a id="adbec32e7e25f70af07d4ab99e5d4a1dc" name="adbec32e7e25f70af07d4ab99e5d4a1dc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_dir</b> (Direction _dir)</td></tr>
+<tr class="memitem:adbec32e7e25f70af07d4ab99e5d4a1dc" id="r_adbec32e7e25f70af07d4ab99e5d4a1dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbec32e7e25f70af07d4ab99e5d4a1dc">set_dir</a> (Direction _dir)</td></tr>
+<tr class="memdesc:adbec32e7e25f70af07d4ab99e5d4a1dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the dir object.  <br /></td></tr>
 <tr class="separator:adbec32e7e25f70af07d4ab99e5d4a1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f902c89163123edb3413101e47d241c" id="r_a4f902c89163123edb3413101e47d241c"><td class="memItemLeft" align="right" valign="top"><a id="a4f902c89163123edb3413101e47d241c" name="a4f902c89163123edb3413101e47d241c"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>get_name</b> ()</td></tr>
+<tr class="memitem:a4f902c89163123edb3413101e47d241c" id="r_a4f902c89163123edb3413101e47d241c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f902c89163123edb3413101e47d241c">get_name</a> ()</td></tr>
+<tr class="memdesc:a4f902c89163123edb3413101e47d241c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name object.  <br /></td></tr>
 <tr class="separator:a4f902c89163123edb3413101e47d241c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a691b853d635d1ee241051525dd24d878" id="r_a691b853d635d1ee241051525dd24d878"><td class="memItemLeft" align="right" valign="top"><a id="a691b853d635d1ee241051525dd24d878" name="a691b853d635d1ee241051525dd24d878"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_name</b> (string _name)</td></tr>
+<tr class="memitem:a691b853d635d1ee241051525dd24d878" id="r_a691b853d635d1ee241051525dd24d878"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a691b853d635d1ee241051525dd24d878">set_name</a> (string _name)</td></tr>
+<tr class="memdesc:a691b853d635d1ee241051525dd24d878"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the name object.  <br /></td></tr>
 <tr class="separator:a691b853d635d1ee241051525dd24d878"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1e06cff98d9e411837914054d3e7294" id="r_ae1e06cff98d9e411837914054d3e7294"><td class="memItemLeft" align="right" valign="top"><a id="ae1e06cff98d9e411837914054d3e7294" name="ae1e06cff98d9e411837914054d3e7294"></a>
-vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_hits</b> ()</td></tr>
+<tr class="memitem:ae1e06cff98d9e411837914054d3e7294" id="r_ae1e06cff98d9e411837914054d3e7294"><td class="memItemLeft" align="right" valign="top">vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1e06cff98d9e411837914054d3e7294">get_hits</a> ()</td></tr>
+<tr class="memdesc:ae1e06cff98d9e411837914054d3e7294"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the hits object.  <br /></td></tr>
 <tr class="separator:ae1e06cff98d9e411837914054d3e7294"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefb9601e6363830dd11316525cb4547a" id="r_aefb9601e6363830dd11316525cb4547a"><td class="memItemLeft" align="right" valign="top"><a id="aefb9601e6363830dd11316525cb4547a" name="aefb9601e6363830dd11316525cb4547a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_hits</b> (vector&lt; bool &gt; _hits)</td></tr>
+<tr class="memitem:aefb9601e6363830dd11316525cb4547a" id="r_aefb9601e6363830dd11316525cb4547a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefb9601e6363830dd11316525cb4547a">set_hits</a> (vector&lt; bool &gt; _hits)</td></tr>
+<tr class="memdesc:aefb9601e6363830dd11316525cb4547a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the hits object.  <br /></td></tr>
 <tr class="separator:aefb9601e6363830dd11316525cb4547a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class that represents a ship. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a44897688c0a5afcbb99b6ae4d2cf93c3" name="a44897688c0a5afcbb99b6ae4d2cf93c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44897688c0a5afcbb99b6ae4d2cf93c3">&#9670;&#160;</a></span>Ship()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ship::Ship </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Direction</td>          <td class="paramname"><span class="paramname"><em>dir</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor for ship. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>the x coordinate of the top left corner of the ship </td></tr>
+    <tr><td class="paramname">y</td><td>the y coordinate of the top left corner of the ship </td></tr>
+    <tr><td class="paramname">size</td><td>the number of squares the ship occupies </td></tr>
+    <tr><td class="paramname">dir</td><td>the direction of the ship (Horizontal or Vertical) </td></tr>
+    <tr><td class="paramname">name</td><td>the name of the ship </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="af9298e7b899c60e9688657581fb520ec" name="af9298e7b899c60e9688657581fb520ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9298e7b899c60e9688657581fb520ec">&#9670;&#160;</a></span>get_dir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Direction Ship::get_dir </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the dir object. </p>
+<dl class="section return"><dt>Returns</dt><dd>the direction of the ship (Horizontal or Vertical) </dd></dl>
+
+</div>
+</div>
+<a id="ae1e06cff98d9e411837914054d3e7294" name="ae1e06cff98d9e411837914054d3e7294"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1e06cff98d9e411837914054d3e7294">&#9670;&#160;</a></span>get_hits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; bool &gt; Ship::get_hits </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the hits object. </p>
+<dl class="section return"><dt>Returns</dt><dd>the vector of booleans that indicates if a ship is hit at a certain position </dd></dl>
+
+</div>
+</div>
+<a id="a4f902c89163123edb3413101e47d241c" name="a4f902c89163123edb3413101e47d241c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f902c89163123edb3413101e47d241c">&#9670;&#160;</a></span>get_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Ship::get_name </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the name object. </p>
+<dl class="section return"><dt>Returns</dt><dd>the name of the ship </dd></dl>
+
+</div>
+</div>
+<a id="afe7fd5445de926a8dc0c2915422fc7ae" name="afe7fd5445de926a8dc0c2915422fc7ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe7fd5445de926a8dc0c2915422fc7ae">&#9670;&#160;</a></span>get_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Ship::get_size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the size object. </p>
+<dl class="section return"><dt>Returns</dt><dd>the number of squares the ship occupies </dd></dl>
+
+</div>
+</div>
+<a id="ad90a079fca601f0148b3cc051ec2294a" name="ad90a079fca601f0148b3cc051ec2294a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad90a079fca601f0148b3cc051ec2294a">&#9670;&#160;</a></span>get_x_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Ship::get_x_start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the x_start object. </p>
+<dl class="section return"><dt>Returns</dt><dd>the x coordinate of the top left corner of the ship </dd></dl>
+
+</div>
+</div>
+<a id="af4d398c85f8c092e1c847e6eb32acaa6" name="af4d398c85f8c092e1c847e6eb32acaa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4d398c85f8c092e1c847e6eb32acaa6">&#9670;&#160;</a></span>get_y_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Ship::get_y_start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the y_start object. </p>
+<dl class="section return"><dt>Returns</dt><dd>the y coordinate of the top left corner of the ship </dd></dl>
+
+</div>
+</div>
+<a id="a76db58fedc260807b900ff48176b0109" name="a76db58fedc260807b900ff48176b0109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76db58fedc260807b900ff48176b0109">&#9670;&#160;</a></span>hit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Ship::hit </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tries to hit at a certain position, if the ship occupies the position, the ship is hit. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>the x coordinate of the position </td></tr>
+    <tr><td class="paramname">y</td><td>the y coordinate of the position </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the ship is hit at the position, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="af9ffdde0d9a779d60aec17c5ca033bcd" name="af9ffdde0d9a779d60aec17c5ca033bcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9ffdde0d9a779d60aec17c5ca033bcd">&#9670;&#160;</a></span>is_dead()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Ship::is_dead </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if the ship is dead. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the ship is dead, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a04c16f55d1d8eae52ce7cc3d68246d35" name="a04c16f55d1d8eae52ce7cc3d68246d35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04c16f55d1d8eae52ce7cc3d68246d35">&#9670;&#160;</a></span>is_hit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Ship::is_hit </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if the ship is hit at a certain position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>the x coordinate of the position </td></tr>
+    <tr><td class="paramname">y</td><td>the y coordinate of the position </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the ship is hit at the position, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="ae11cb9ef580f3f8d89a0b369ef2af73b" name="ae11cb9ef580f3f8d89a0b369ef2af73b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae11cb9ef580f3f8d89a0b369ef2af73b">&#9670;&#160;</a></span>occupies()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Ship::occupies </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if the ship occupies a certain position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>the x coordinate of the position </td></tr>
+    <tr><td class="paramname">y</td><td>the y coordinate of the position </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the ship occupies the position, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="adbec32e7e25f70af07d4ab99e5d4a1dc" name="adbec32e7e25f70af07d4ab99e5d4a1dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbec32e7e25f70af07d4ab99e5d4a1dc">&#9670;&#160;</a></span>set_dir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ship::set_dir </td>
+          <td>(</td>
+          <td class="paramtype">Direction</td>          <td class="paramname"><span class="paramname"><em>_dir</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the dir object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_dir</td><td>the direction of the ship (Horizontal or Vertical) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aefb9601e6363830dd11316525cb4547a" name="aefb9601e6363830dd11316525cb4547a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefb9601e6363830dd11316525cb4547a">&#9670;&#160;</a></span>set_hits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ship::set_hits </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; bool &gt;</td>          <td class="paramname"><span class="paramname"><em>_hits</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the hits object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_hits</td><td>the vector of booleans that indicates if a ship is hit at a certain position </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a691b853d635d1ee241051525dd24d878" name="a691b853d635d1ee241051525dd24d878"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a691b853d635d1ee241051525dd24d878">&#9670;&#160;</a></span>set_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ship::set_name </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>_name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the name object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_name</td><td>the name of the ship </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0d184845caddc7801a6cc094ef8073ce" name="a0d184845caddc7801a6cc094ef8073ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d184845caddc7801a6cc094ef8073ce">&#9670;&#160;</a></span>set_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ship::set_size </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>_size</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the size object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_size</td><td>the number of squares the ship occupies </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab098c1bc30803a6f3982919f78dce214" name="ab098c1bc30803a6f3982919f78dce214"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab098c1bc30803a6f3982919f78dce214">&#9670;&#160;</a></span>set_x_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ship::set_x_start </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>_x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the x_start object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_x</td><td>the x coordinate of the top left corner of the ship </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af924a2b439d9686b2dff922a45fd72cf" name="af924a2b439d9686b2dff922a45fd72cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af924a2b439d9686b2dff922a45fd72cf">&#9670;&#160;</a></span>set_y_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ship::set_y_start </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>_y</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the y_start object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_y</td><td>the y coordinate of the top left corner of the ship </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="../../d5/de7/_ship_8h_source.html">Ship.h</a></li>
 <li>src/<b>Ship.cpp</b></li>

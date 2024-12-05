@@ -1,59 +1,324 @@
 \doxysection{Ship Class Reference}
 \hypertarget{class_ship}{}\label{class_ship}\index{Ship@{Ship}}
+
+
+Class that represents a ship.  
+
+
+
+
+{\ttfamily \#include $<$Ship.\+h$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_ship_a44897688c0a5afcbb99b6ae4d2cf93c3}\label{class_ship_a44897688c0a5afcbb99b6ae4d2cf93c3} 
-{\bfseries Ship} (int x, int y, int size, Direction dir, string name)
-\item 
-\Hypertarget{class_ship_af9ffdde0d9a779d60aec17c5ca033bcd}\label{class_ship_af9ffdde0d9a779d60aec17c5ca033bcd} 
-bool {\bfseries is\+\_\+dead} ()
-\item 
-\Hypertarget{class_ship_ae11cb9ef580f3f8d89a0b369ef2af73b}\label{class_ship_ae11cb9ef580f3f8d89a0b369ef2af73b} 
-bool {\bfseries occupies} (int x, int y)
-\item 
-\Hypertarget{class_ship_a76db58fedc260807b900ff48176b0109}\label{class_ship_a76db58fedc260807b900ff48176b0109} 
-bool {\bfseries hit} (int x, int y)
-\item 
-\Hypertarget{class_ship_a04c16f55d1d8eae52ce7cc3d68246d35}\label{class_ship_a04c16f55d1d8eae52ce7cc3d68246d35} 
-bool {\bfseries is\+\_\+hit} (int x, int y)
-\item 
-\Hypertarget{class_ship_ad90a079fca601f0148b3cc051ec2294a}\label{class_ship_ad90a079fca601f0148b3cc051ec2294a} 
-int {\bfseries get\+\_\+x\+\_\+start} ()
-\item 
-\Hypertarget{class_ship_ab098c1bc30803a6f3982919f78dce214}\label{class_ship_ab098c1bc30803a6f3982919f78dce214} 
-void {\bfseries set\+\_\+x\+\_\+start} (int \+\_\+x)
-\item 
-\Hypertarget{class_ship_af4d398c85f8c092e1c847e6eb32acaa6}\label{class_ship_af4d398c85f8c092e1c847e6eb32acaa6} 
-int {\bfseries get\+\_\+y\+\_\+start} ()
-\item 
-\Hypertarget{class_ship_af924a2b439d9686b2dff922a45fd72cf}\label{class_ship_af924a2b439d9686b2dff922a45fd72cf} 
-void {\bfseries set\+\_\+y\+\_\+start} (int \+\_\+y)
-\item 
-\Hypertarget{class_ship_afe7fd5445de926a8dc0c2915422fc7ae}\label{class_ship_afe7fd5445de926a8dc0c2915422fc7ae} 
-int {\bfseries get\+\_\+size} ()
-\item 
-\Hypertarget{class_ship_a0d184845caddc7801a6cc094ef8073ce}\label{class_ship_a0d184845caddc7801a6cc094ef8073ce} 
-void {\bfseries set\+\_\+size} (int \+\_\+size)
-\item 
-\Hypertarget{class_ship_af9298e7b899c60e9688657581fb520ec}\label{class_ship_af9298e7b899c60e9688657581fb520ec} 
-Direction {\bfseries get\+\_\+dir} ()
-\item 
-\Hypertarget{class_ship_adbec32e7e25f70af07d4ab99e5d4a1dc}\label{class_ship_adbec32e7e25f70af07d4ab99e5d4a1dc} 
-void {\bfseries set\+\_\+dir} (Direction \+\_\+dir)
-\item 
-\Hypertarget{class_ship_a4f902c89163123edb3413101e47d241c}\label{class_ship_a4f902c89163123edb3413101e47d241c} 
-string {\bfseries get\+\_\+name} ()
-\item 
-\Hypertarget{class_ship_a691b853d635d1ee241051525dd24d878}\label{class_ship_a691b853d635d1ee241051525dd24d878} 
-void {\bfseries set\+\_\+name} (string \+\_\+name)
-\item 
-\Hypertarget{class_ship_ae1e06cff98d9e411837914054d3e7294}\label{class_ship_ae1e06cff98d9e411837914054d3e7294} 
-vector$<$ bool $>$ {\bfseries get\+\_\+hits} ()
-\item 
-\Hypertarget{class_ship_aefb9601e6363830dd11316525cb4547a}\label{class_ship_aefb9601e6363830dd11316525cb4547a} 
-void {\bfseries set\+\_\+hits} (vector$<$ bool $>$ \+\_\+hits)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_ship_a44897688c0a5afcbb99b6ae4d2cf93c3}{Ship}} (int x, int y, int size, Direction dir, string name)
+\begin{DoxyCompactList}\small\item\em Constructor for ship. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ship_af9ffdde0d9a779d60aec17c5ca033bcd}{is\+\_\+dead}} ()
+\begin{DoxyCompactList}\small\item\em Check if the ship is dead. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ship_ae11cb9ef580f3f8d89a0b369ef2af73b}{occupies}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Check if the ship occupies a certain position. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ship_a76db58fedc260807b900ff48176b0109}{hit}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Tries to hit at a certain position, if the ship occupies the position, the ship is hit. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ship_a04c16f55d1d8eae52ce7cc3d68246d35}{is\+\_\+hit}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Check if the ship is hit at a certain position. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_ship_ad90a079fca601f0148b3cc051ec2294a}{get\+\_\+x\+\_\+start}} ()
+\begin{DoxyCompactList}\small\item\em Get the x\+\_\+start object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ship_ab098c1bc30803a6f3982919f78dce214}{set\+\_\+x\+\_\+start}} (int \+\_\+x)
+\begin{DoxyCompactList}\small\item\em Set the x\+\_\+start object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_ship_af4d398c85f8c092e1c847e6eb32acaa6}{get\+\_\+y\+\_\+start}} ()
+\begin{DoxyCompactList}\small\item\em Get the y\+\_\+start object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ship_af924a2b439d9686b2dff922a45fd72cf}{set\+\_\+y\+\_\+start}} (int \+\_\+y)
+\begin{DoxyCompactList}\small\item\em Set the y\+\_\+start object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_ship_afe7fd5445de926a8dc0c2915422fc7ae}{get\+\_\+size}} ()
+\begin{DoxyCompactList}\small\item\em Get the size object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ship_a0d184845caddc7801a6cc094ef8073ce}{set\+\_\+size}} (int \+\_\+size)
+\begin{DoxyCompactList}\small\item\em Set the size object. \end{DoxyCompactList}\item 
+Direction \mbox{\hyperlink{class_ship_af9298e7b899c60e9688657581fb520ec}{get\+\_\+dir}} ()
+\begin{DoxyCompactList}\small\item\em Get the dir object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ship_adbec32e7e25f70af07d4ab99e5d4a1dc}{set\+\_\+dir}} (Direction \+\_\+dir)
+\begin{DoxyCompactList}\small\item\em Set the dir object. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_ship_a4f902c89163123edb3413101e47d241c}{get\+\_\+name}} ()
+\begin{DoxyCompactList}\small\item\em Get the name object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ship_a691b853d635d1ee241051525dd24d878}{set\+\_\+name}} (string \+\_\+name)
+\begin{DoxyCompactList}\small\item\em Set the name object. \end{DoxyCompactList}\item 
+vector$<$ bool $>$ \mbox{\hyperlink{class_ship_ae1e06cff98d9e411837914054d3e7294}{get\+\_\+hits}} ()
+\begin{DoxyCompactList}\small\item\em Get the hits object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ship_aefb9601e6363830dd11316525cb4547a}{set\+\_\+hits}} (vector$<$ bool $>$ \+\_\+hits)
+\begin{DoxyCompactList}\small\item\em Set the hits object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that represents a ship. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_ship_a44897688c0a5afcbb99b6ae4d2cf93c3}\index{Ship@{Ship}!Ship@{Ship}}
+\index{Ship@{Ship}!Ship@{Ship}}
+\doxysubsubsection{\texorpdfstring{Ship()}{Ship()}}
+{\footnotesize\ttfamily \label{class_ship_a44897688c0a5afcbb99b6ae4d2cf93c3} 
+Ship\+::\+Ship (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{size}{, }\item[{Direction}]{dir}{, }\item[{string}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for ship. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & the x coordinate of the top left corner of the ship \\
+\hline
+{\em y} & the y coordinate of the top left corner of the ship \\
+\hline
+{\em size} & the number of squares the ship occupies \\
+\hline
+{\em dir} & the direction of the ship (Horizontal or Vertical) \\
+\hline
+{\em name} & the name of the ship \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ship_af9298e7b899c60e9688657581fb520ec}\index{Ship@{Ship}!get\_dir@{get\_dir}}
+\index{get\_dir@{get\_dir}!Ship@{Ship}}
+\doxysubsubsection{\texorpdfstring{get\_dir()}{get\_dir()}}
+{\footnotesize\ttfamily \label{class_ship_af9298e7b899c60e9688657581fb520ec} 
+Direction Ship\+::get\+\_\+dir (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the dir object. 
+
+\begin{DoxyReturn}{Returns}
+the direction of the ship (Horizontal or Vertical) 
+\end{DoxyReturn}
+\Hypertarget{class_ship_ae1e06cff98d9e411837914054d3e7294}\index{Ship@{Ship}!get\_hits@{get\_hits}}
+\index{get\_hits@{get\_hits}!Ship@{Ship}}
+\doxysubsubsection{\texorpdfstring{get\_hits()}{get\_hits()}}
+{\footnotesize\ttfamily \label{class_ship_ae1e06cff98d9e411837914054d3e7294} 
+vector$<$ bool $>$ Ship\+::get\+\_\+hits (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the hits object. 
+
+\begin{DoxyReturn}{Returns}
+the vector of booleans that indicates if a ship is hit at a certain position 
+\end{DoxyReturn}
+\Hypertarget{class_ship_a4f902c89163123edb3413101e47d241c}\index{Ship@{Ship}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!Ship@{Ship}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily \label{class_ship_a4f902c89163123edb3413101e47d241c} 
+string Ship\+::get\+\_\+name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the name object. 
+
+\begin{DoxyReturn}{Returns}
+the name of the ship 
+\end{DoxyReturn}
+\Hypertarget{class_ship_afe7fd5445de926a8dc0c2915422fc7ae}\index{Ship@{Ship}!get\_size@{get\_size}}
+\index{get\_size@{get\_size}!Ship@{Ship}}
+\doxysubsubsection{\texorpdfstring{get\_size()}{get\_size()}}
+{\footnotesize\ttfamily \label{class_ship_afe7fd5445de926a8dc0c2915422fc7ae} 
+int Ship\+::get\+\_\+size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the size object. 
+
+\begin{DoxyReturn}{Returns}
+the number of squares the ship occupies 
+\end{DoxyReturn}
+\Hypertarget{class_ship_ad90a079fca601f0148b3cc051ec2294a}\index{Ship@{Ship}!get\_x\_start@{get\_x\_start}}
+\index{get\_x\_start@{get\_x\_start}!Ship@{Ship}}
+\doxysubsubsection{\texorpdfstring{get\_x\_start()}{get\_x\_start()}}
+{\footnotesize\ttfamily \label{class_ship_ad90a079fca601f0148b3cc051ec2294a} 
+int Ship\+::get\+\_\+x\+\_\+start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the x\+\_\+start object. 
+
+\begin{DoxyReturn}{Returns}
+the x coordinate of the top left corner of the ship 
+\end{DoxyReturn}
+\Hypertarget{class_ship_af4d398c85f8c092e1c847e6eb32acaa6}\index{Ship@{Ship}!get\_y\_start@{get\_y\_start}}
+\index{get\_y\_start@{get\_y\_start}!Ship@{Ship}}
+\doxysubsubsection{\texorpdfstring{get\_y\_start()}{get\_y\_start()}}
+{\footnotesize\ttfamily \label{class_ship_af4d398c85f8c092e1c847e6eb32acaa6} 
+int Ship\+::get\+\_\+y\+\_\+start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the y\+\_\+start object. 
+
+\begin{DoxyReturn}{Returns}
+the y coordinate of the top left corner of the ship 
+\end{DoxyReturn}
+\Hypertarget{class_ship_a76db58fedc260807b900ff48176b0109}\index{Ship@{Ship}!hit@{hit}}
+\index{hit@{hit}!Ship@{Ship}}
+\doxysubsubsection{\texorpdfstring{hit()}{hit()}}
+{\footnotesize\ttfamily \label{class_ship_a76db58fedc260807b900ff48176b0109} 
+bool Ship\+::hit (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Tries to hit at a certain position, if the ship occupies the position, the ship is hit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & the x coordinate of the position \\
+\hline
+{\em y} & the y coordinate of the position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the ship is hit at the position, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_ship_af9ffdde0d9a779d60aec17c5ca033bcd}\index{Ship@{Ship}!is\_dead@{is\_dead}}
+\index{is\_dead@{is\_dead}!Ship@{Ship}}
+\doxysubsubsection{\texorpdfstring{is\_dead()}{is\_dead()}}
+{\footnotesize\ttfamily \label{class_ship_af9ffdde0d9a779d60aec17c5ca033bcd} 
+bool Ship\+::is\+\_\+dead (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Check if the ship is dead. 
+
+\begin{DoxyReturn}{Returns}
+true if the ship is dead, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_ship_a04c16f55d1d8eae52ce7cc3d68246d35}\index{Ship@{Ship}!is\_hit@{is\_hit}}
+\index{is\_hit@{is\_hit}!Ship@{Ship}}
+\doxysubsubsection{\texorpdfstring{is\_hit()}{is\_hit()}}
+{\footnotesize\ttfamily \label{class_ship_a04c16f55d1d8eae52ce7cc3d68246d35} 
+bool Ship\+::is\+\_\+hit (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Check if the ship is hit at a certain position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & the x coordinate of the position \\
+\hline
+{\em y} & the y coordinate of the position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the ship is hit at the position, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_ship_ae11cb9ef580f3f8d89a0b369ef2af73b}\index{Ship@{Ship}!occupies@{occupies}}
+\index{occupies@{occupies}!Ship@{Ship}}
+\doxysubsubsection{\texorpdfstring{occupies()}{occupies()}}
+{\footnotesize\ttfamily \label{class_ship_ae11cb9ef580f3f8d89a0b369ef2af73b} 
+bool Ship\+::occupies (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Check if the ship occupies a certain position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & the x coordinate of the position \\
+\hline
+{\em y} & the y coordinate of the position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the ship occupies the position, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_ship_adbec32e7e25f70af07d4ab99e5d4a1dc}\index{Ship@{Ship}!set\_dir@{set\_dir}}
+\index{set\_dir@{set\_dir}!Ship@{Ship}}
+\doxysubsubsection{\texorpdfstring{set\_dir()}{set\_dir()}}
+{\footnotesize\ttfamily \label{class_ship_adbec32e7e25f70af07d4ab99e5d4a1dc} 
+void Ship\+::set\+\_\+dir (\begin{DoxyParamCaption}\item[{Direction}]{\+\_\+dir}{}\end{DoxyParamCaption})}
+
+
+
+Set the dir object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+dir} & the direction of the ship (Horizontal or Vertical) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ship_aefb9601e6363830dd11316525cb4547a}\index{Ship@{Ship}!set\_hits@{set\_hits}}
+\index{set\_hits@{set\_hits}!Ship@{Ship}}
+\doxysubsubsection{\texorpdfstring{set\_hits()}{set\_hits()}}
+{\footnotesize\ttfamily \label{class_ship_aefb9601e6363830dd11316525cb4547a} 
+void Ship\+::set\+\_\+hits (\begin{DoxyParamCaption}\item[{vector$<$ bool $>$}]{\+\_\+hits}{}\end{DoxyParamCaption})}
+
+
+
+Set the hits object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+hits} & the vector of booleans that indicates if a ship is hit at a certain position \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ship_a691b853d635d1ee241051525dd24d878}\index{Ship@{Ship}!set\_name@{set\_name}}
+\index{set\_name@{set\_name}!Ship@{Ship}}
+\doxysubsubsection{\texorpdfstring{set\_name()}{set\_name()}}
+{\footnotesize\ttfamily \label{class_ship_a691b853d635d1ee241051525dd24d878} 
+void Ship\+::set\+\_\+name (\begin{DoxyParamCaption}\item[{string}]{\+\_\+name}{}\end{DoxyParamCaption})}
+
+
+
+Set the name object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & the name of the ship \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ship_a0d184845caddc7801a6cc094ef8073ce}\index{Ship@{Ship}!set\_size@{set\_size}}
+\index{set\_size@{set\_size}!Ship@{Ship}}
+\doxysubsubsection{\texorpdfstring{set\_size()}{set\_size()}}
+{\footnotesize\ttfamily \label{class_ship_a0d184845caddc7801a6cc094ef8073ce} 
+void Ship\+::set\+\_\+size (\begin{DoxyParamCaption}\item[{int}]{\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Set the size object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+size} & the number of squares the ship occupies \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ship_ab098c1bc30803a6f3982919f78dce214}\index{Ship@{Ship}!set\_x\_start@{set\_x\_start}}
+\index{set\_x\_start@{set\_x\_start}!Ship@{Ship}}
+\doxysubsubsection{\texorpdfstring{set\_x\_start()}{set\_x\_start()}}
+{\footnotesize\ttfamily \label{class_ship_ab098c1bc30803a6f3982919f78dce214} 
+void Ship\+::set\+\_\+x\+\_\+start (\begin{DoxyParamCaption}\item[{int}]{\+\_\+x}{}\end{DoxyParamCaption})}
+
+
+
+Set the x\+\_\+start object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+x} & the x coordinate of the top left corner of the ship \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ship_af924a2b439d9686b2dff922a45fd72cf}\index{Ship@{Ship}!set\_y\_start@{set\_y\_start}}
+\index{set\_y\_start@{set\_y\_start}!Ship@{Ship}}
+\doxysubsubsection{\texorpdfstring{set\_y\_start()}{set\_y\_start()}}
+{\footnotesize\ttfamily \label{class_ship_af924a2b439d9686b2dff922a45fd72cf} 
+void Ship\+::set\+\_\+y\+\_\+start (\begin{DoxyParamCaption}\item[{int}]{\+\_\+y}{}\end{DoxyParamCaption})}
+
+
+
+Set the y\+\_\+start object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+y} & the y coordinate of the top left corner of the ship \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

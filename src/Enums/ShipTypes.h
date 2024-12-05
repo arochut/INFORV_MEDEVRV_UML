@@ -5,11 +5,15 @@
 #include <string>
 using namespace std;
 
+/// @brief Struct that represents a ship type
 struct ShipType {
+    /// @brief name is the name of the ship type
     string name;
+    /// @brief size is the size of the ship type
     int size; 
 };
 
+/// @brief Class that contains all the ship types
 class ShipTypes
 {
     

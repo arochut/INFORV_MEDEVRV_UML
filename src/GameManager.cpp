@@ -4,9 +4,9 @@ GameManager::GameManager()
 {
     boardA = Board();
     boardB = Board();
-    turn=true;
+    a_to_play=true;
 }
-
+ 
 bool GameManager::is_over()
 {
     if(boardA.is_over() || boardB.is_over()){
@@ -19,7 +19,7 @@ void GameManager::play_turn()
 {
     string bullet;
     while (!is_over()){
-        if (turn){
+        if (a_to_play){
             cout << "Au tour du joueur A"<< endl;
         }else {
             cout << "Au tour du joueur B"<< endl;
@@ -28,13 +28,13 @@ void GameManager::play_turn()
         cin >> bullet;
         int x = bullet[0] - 'A' + 1;
         int y = bullet[1] - '0';
-        if (turn){
+        if (a_to_play){
             boardB.shoot(x,y);
         }else {
             boardA.shoot(x,y);
         }
         cout << "Fin du tour"<< endl;
-        turn=!turn;
+        a_to_play=!a_to_play;
     }
 }
 
@@ -60,10 +60,10 @@ void GameManager::set_boardB(Board _boardB)
 
 bool GameManager::get_turn()
 {
-    return turn;
+    return a_to_play;
 }
 
-void GameManager::set_boardA(bool _turn)
+void GameManager::set_turn(bool _turn)
 {
-    turn=_turn;
+    a_to_play=_turn;
 }
