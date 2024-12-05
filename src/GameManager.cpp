@@ -1,33 +1,32 @@
 #include "GameManager.h"
 
-GameManager::GameManager()
+GameManager::GameManager(Board _boardA, Board _boardB)
 {
-    boardA = Board();
-    boardB = Board();
-    a_to_play=true;
+    boardA = _boardA;
+    boardB = _boardB;
+    a_to_play = true;
 }
+
  
 bool GameManager::is_over()
 {
-    if(boardA.is_over() || boardB.is_over()){
-        return true;
-    }
-    return false;
+    return (boardA.all_boats_dead() || boardB.all_boats_dead());
 }
 
-void GameManager::play_turn()
+void GameManager::play()
 {
     string bullet;
+    cout << "Bienvenue dans la bataille navale"<< endl;
     while (!is_over()){
         if (a_to_play){
             cout << "Au tour du joueur A"<< endl;
-            cout << "Ton platau"<< endl;
+            cout << "Ton plateau"<< endl;
             boardA.display_own();
             cout << "Le platau adverse"<< endl;
             boardB.display_for_opponent();
         }else {
             cout << "Au tour du joueur B"<< endl;
-            cout << "Ton platau"<< endl;
+            cout << "Ton plateau"<< endl;
             boardB.display_own();
             cout << "Le platau adverse"<< endl;
             boardA.display_for_opponent();
@@ -44,6 +43,8 @@ void GameManager::play_turn()
         cout << "Fin du tour"<< endl;
         a_to_play=!a_to_play;
     }
+
+    cout << "Fin de la partie"<< endl;
 }
 
 Board GameManager::get_boardA()

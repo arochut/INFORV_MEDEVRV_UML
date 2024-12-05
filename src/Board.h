@@ -14,7 +14,7 @@ class Board{
     list<Ship> ships;
 
     /// @brief shots is a matrix of shots on the board
-    vector<vector<char>> shots;
+    vector<vector<int>> shots;
     
 public :
     /// @brief Construct a new Board object
@@ -22,7 +22,7 @@ public :
 
     /// @brief Check if the game is over
     /// @return true if the game is over, false otherwise
-    bool is_over();
+    bool all_boats_dead();
 
     /// @brief Shoot at a certain position
     /// @param x the x coordinate of the position

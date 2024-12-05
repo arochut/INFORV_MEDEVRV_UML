@@ -5,12 +5,13 @@ using namespace std;
 Board::Board()
 {
     ships = list<Ship>();
+    shots = vector<vector<int>>(10, vector<int>(10, 0));
 }
 
-bool Board::is_over()
+bool Board::all_boats_dead()
 {
-    for(list<Ship>::iterator it=ships.begin(); it!=ships.end(); it++){
-        if(!(*it).is_dead()){
+    for (list<Ship>::iterator it=ships.begin(); it!=ships.end(); it++){
+        if (!it->is_dead()){
             return false;
         }
     }
@@ -21,7 +22,7 @@ bool Board::shoot(int x, int y)
 {
     for(list<Ship>::iterator it=ships.begin(); it!=ships.end(); it++){
         if((*it).hit(x,y)){
-            shots[x-1][y-1] = 'X'; // Record hit
+            shots[x-1][y-1] = 2; // Record hit
             if (it->is_dead()){
                 cout << "Touché-Coulé" << endl;
             } else {
@@ -30,7 +31,7 @@ bool Board::shoot(int x, int y)
             return true;
         }
     }
-    shots[x-1][y-1] = 'O'; // Record miss
+    shots[x-1][y-1] = 1; // Record miss
     cout << "Raté" << endl;
     return false;
 }
@@ -78,12 +79,12 @@ void Board::display_for_opponent()
     for(int i=1; i<11;i++){
         cout<< grid[i-1];
         for(int j=1; j<11;j++){
-            if(shots[i-1][j-1] == 'X'){
-                cout<<" | X";
-            }else if(shots[i-1][j-1] == 'O'){
-                cout<<" | shots[]";
-            }else {
+            if(shots[i-1][j-1] == 0){
                 cout<<" |  ";
+            }else if(shots[i-1][j-1] == 1){
+                cout<<" | O";
+            }else{
+                cout<<" | X";
             }
         }
         cout<<endl;

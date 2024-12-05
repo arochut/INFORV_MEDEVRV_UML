@@ -11,13 +11,18 @@ const ShipType ShipTypes::SUBMARINE_2 = {"Submarine 2", 2};
 const ShipType ShipTypes::FISHING_1 = {"Fishing 1", 1};
 const ShipType ShipTypes::FISHING_2 = {"Fishing 2", 1};
 
+// const ShipType ShipTypes::SHIP_TYPES[ShipTypes::SHIP_COUNT] = {
+//     ShipTypes::BATTLESHIP,
+//     ShipTypes::CRUISER,
+//     ShipTypes::DESTROYER,
+//     ShipTypes::SUBMARINE_1,
+//     ShipTypes::SUBMARINE_2,
+//     ShipTypes::FISHING_1,
+//     ShipTypes::FISHING_2
+// };
+
 const ShipType ShipTypes::SHIP_TYPES[ShipTypes::SHIP_COUNT] = {
     ShipTypes::BATTLESHIP,
-    ShipTypes::CRUISER,
-    ShipTypes::DESTROYER,
-    ShipTypes::SUBMARINE_1,
-    ShipTypes::SUBMARINE_2,
-    ShipTypes::FISHING_1,
-    ShipTypes::FISHING_2
+    ShipTypes::CRUISER
 };
 

@@ -16,13 +16,13 @@ class GameManager{
     bool a_to_play;
 public:
     /// @brief Construct a new GameManager object
-    GameManager();
+    GameManager(Board _boardA, Board _boardB);
 
     /// @brief Check if the game is over
     bool is_over();
 
-    /// @brief Play a a_to_play
-    void play_turn();
+    /// @brief Play a
+    void play();
 
     /// @brief Get the boardA object
     /// @return Board
