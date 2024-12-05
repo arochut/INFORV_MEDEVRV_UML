@@ -1,0 +1,31 @@
+\doxysection{Board\+Factory.\+h}
+\hypertarget{_board_factory_8h_source}{}\label{_board_factory_8h_source}\index{src/BoardFactory.h@{src/BoardFactory.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ BOARDFACTORY\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ BOARDFACTORY\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Board.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Ship.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}ShipTypes.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_board_factory}{BoardFactory}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_board_factory}{BoardFactory}}();}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_board}{Board}}\ create\_board();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ private\ :\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ place\_ship(\mbox{\hyperlink{class_board}{Board}}\&\ board,\ \mbox{\hyperlink{struct_ship_type}{ShipType}}\ type);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ place\_all\_ships(\mbox{\hyperlink{class_board}{Board}}\&\ board);}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

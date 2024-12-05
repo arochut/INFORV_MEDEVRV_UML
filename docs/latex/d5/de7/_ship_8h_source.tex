@@ -1,0 +1,51 @@
+\doxysection{Ship.\+h}
+\hypertarget{_ship_8h_source}{}\label{_ship_8h_source}\index{src/Ship.h@{src/Ship.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#ifndef\ SHIP\_H}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ SHIP\_H}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Enums/Direction.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ship}{Ship}}\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ x\_start;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ y\_start;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ size;}
+\DoxyCodeLine{00019\ \ \ \ \ Direction\ dir;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{string}\ name;}
+\DoxyCodeLine{00022\ \ \ \ \ vector<bool>\ hits;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ int\ hit\_score;}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_ship}{Ship}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ size,\ Direction\ dir,\ \textcolor{keywordtype}{string}\ name);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_dead();}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ occupies(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ hit(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_hit(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ get\_x\_start();}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_x\_start(\textcolor{keywordtype}{int}\ \_x);}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ get\_y\_start();}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_y\_start(\textcolor{keywordtype}{int}\ \_y);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ get\_size();}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_size(\textcolor{keywordtype}{int}\ \_size);}
+\DoxyCodeLine{00037\ \ \ \ \ Direction\ get\_dir();}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_dir(Direction\ \_dir);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{string}\ get\_name();}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_name(\textcolor{keywordtype}{string}\ \_name);}
+\DoxyCodeLine{00041\ \ \ \ \ vector<bool>\ get\_hits();}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_hits(vector<bool>\ \_hits);}
+\DoxyCodeLine{00043\ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
