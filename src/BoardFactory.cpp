@@ -14,7 +14,7 @@ void BoardFactory::place_ship(Board& board, ShipType type) {
     Direction dir;
     while(!input_correct)  {
     cout << "Ou voulez-vous placer votre " << type.name << " (taille " << type.size << ") ?" << endl;
-    board.display();
+    board.display_own();
     cout << "Entrez les coordonnées sous la forme 'B4' :" << endl;
         string coord;
         cin >> coord;
@@ -39,7 +39,7 @@ void BoardFactory::place_ship(Board& board, ShipType type) {
         
 
         if (input_correct && board.can_place_ship(xy.first, xy.second, type.size, dir)) {
-                board.addShip(new Ship(xy.first, xy.second, type.size, dir, type.name));
+                board.add_ship(new Ship(xy.first, xy.second, type.size, dir, type.name));
             } else {
                 cout << "Impossible de placer le bateau ici" << endl;
                 input_correct = false;
@@ -52,7 +52,7 @@ void BoardFactory::place_all_ships(Board& board) {
     }
     cout << "Tous les bateaux ont été placés" << endl;
     cout << "Voici votre plateau de jeu :" << endl;
-    board.display();
+    board.display_own();
 }
 
 Board BoardFactory::create_board() {

@@ -21,6 +21,7 @@ bool Board::shoot(int x, int y)
 {
     for(list<Ship>::iterator it=ships.begin(); it!=ships.end(); it++){
         if((*it).hit(x,y)){
+            shots[x-1][y-1] = 'X'; // Record hit
             if (it->is_dead()){
                 cout << "Touché-Coulé" << endl;
             } else {
@@ -29,6 +30,7 @@ bool Board::shoot(int x, int y)
             return true;
         }
     }
+    shots[x-1][y-1] = 'O'; // Record miss
     cout << "Raté" << endl;
     return false;
 }
@@ -43,7 +45,7 @@ bool Board::case_vide(int x, int y)
     return true;
 }
 
-void Board::display()
+void Board::display_own()
 {
     string grid[] = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
     cout << "    1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 "<<endl;
@@ -69,6 +71,26 @@ void Board::display()
     }
 }
 
+void Board::display_for_opponent()
+{
+    string grid[] = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
+    cout << "    1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 "<<endl;
+    for(int i=1; i<11;i++){
+        cout<< grid[i-1];
+        for(int j=1; j<11;j++){
+            if(shots[i-1][j-1] == 'X'){
+                cout<<" | X";
+            }else if(shots[i-1][j-1] == 'O'){
+                cout<<" | shots[]";
+            }else {
+                cout<<" |  ";
+            }
+        }
+        cout<<endl;
+    }
+}
+
+
 list<Ship> Board::get_ships()
 {
     return ships;
@@ -79,7 +101,7 @@ void Board::set_ships(list<Ship> _ships)
     ships=_ships;
 }
 
-void Board::addShip(Ship* ship)
+void Board::add_ship(Ship* ship)
 {
     ships.push_back(*ship);
 }
