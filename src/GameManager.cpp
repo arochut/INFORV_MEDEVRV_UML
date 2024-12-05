@@ -16,16 +16,21 @@ bool GameManager::is_over()
 void GameManager::play()
 {
     string bullet;
+    string buffer;
     cout << "Bienvenue dans la bataille navale"<< endl;
     while (!is_over()){
         if (a_to_play){
             cout << "Au tour du joueur A"<< endl;
+            cout << "Est-tu prêt ? Entre une touche"<<endl;
+            cin>>buffer;
             cout << "Ton plateau"<< endl;
             boardA.display_own();
             cout << "Le plateau adverse"<< endl;
             boardB.display_for_opponent();
         }else {
             cout << "Au tour du joueur B"<< endl;
+            cout << "Est-tu prêt ? Entre une touche"<<endl;
+            cin>>buffer;
             cout << "Ton plateau"<< endl;
             boardB.display_own();
             cout << "Le plateau adverse"<< endl;
@@ -42,6 +47,8 @@ void GameManager::play()
         }else {
             boardA.shoot(x,y);
         }
+        cout << "Entre une touche pour passer"<<endl;
+        cin>>buffer;
         cout << "Fin du tour"<< endl;
         a_to_play=!a_to_play;
     }
