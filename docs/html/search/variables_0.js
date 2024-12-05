@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name_0',['name',['../d6/d9c/struct_ship_type.html#a6fc012a10d78593b1f70debd16ef6493',1,'ShipType']]]
+  ['a_5fto_5fplay_0',['a_to_play',['../db/d10/class_game_manager.html#a028ebaafdd59de151e2257adc72dc289',1,'GameManager']]]
 ];

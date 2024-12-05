@@ -1,0 +1,5 @@
+<map id="Board::get_coords" name="Board::get_coords">
+<area shape="rect" id="Node000001" title="Get a pair of coordinates from a string." alt="" coords="192,5,319,32"/>
+<area shape="rect" id="Node000002" href="$db/d10/class_game_manager.html#a567d2f96fbe4dfacf81c738e5d8ed716" title="Play a game of battleship." alt="" coords="5,5,144,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,21,144,21,144,16,176,16"/>
+</map>

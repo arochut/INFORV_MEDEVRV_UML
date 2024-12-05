@@ -1,0 +1,5 @@
+<map id="Ship::occupies" name="Ship::occupies">
+<area shape="rect" id="Node000001" title="Check if the ship occupies a certain position." alt="" coords="123,5,230,32"/>
+<area shape="rect" id="Node000002" href="$d3/d1d/class_ship.html#a76db58fedc260807b900ff48176b0109" title="Tries to hit at a certain position, if the ship occupies the position, the ship is hit." alt="" coords="5,5,75,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,21,75,21,75,16,107,16"/>
+</map>

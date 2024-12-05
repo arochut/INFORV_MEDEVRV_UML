@@ -13,10 +13,12 @@ bool GameManager::is_over()
     return (boardA.all_boats_dead() || boardB.all_boats_dead());
 }
 
+
 void GameManager::play()
 {
     string bullet;
     string buffer;
+    clear();
     cout << "Bienvenue dans la bataille navale"<< endl;
     while (!is_over()){
         if (a_to_play){
@@ -48,6 +50,7 @@ void GameManager::play()
             boardA.shoot(x,y);
         }
         cout << "Entre une touche pour passer"<<endl;
+        clear();
         cin>>buffer;
         cout << "Fin du tour"<< endl;
         a_to_play=!a_to_play;
@@ -88,4 +91,9 @@ bool GameManager::get_turn()
 void GameManager::set_turn(bool _turn)
 {
     a_to_play=_turn;
+}
+
+
+void GameManager::clear() {
+    cout << string( 100, '\n' );
 }

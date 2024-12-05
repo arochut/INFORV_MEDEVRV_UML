@@ -11,8 +11,10 @@ var searchData=
   ['set_5fx_5fstart_8',['set_x_start',['../d3/d1d/class_ship.html#ab098c1bc30803a6f3982919f78dce214',1,'Ship']]],
   ['set_5fy_5fstart_9',['set_y_start',['../d3/d1d/class_ship.html#af924a2b439d9686b2dff922a45fd72cf',1,'Ship']]],
   ['ship_10',['Ship',['../d3/d1d/class_ship.html',1,'Ship'],['../d3/d1d/class_ship.html#a44897688c0a5afcbb99b6ae4d2cf93c3',1,'Ship::Ship()']]],
-  ['shiptype_11',['ShipType',['../d6/d9c/struct_ship_type.html',1,'']]],
-  ['shiptypes_12',['ShipTypes',['../d0/d58/class_ship_types.html',1,'']]],
-  ['shoot_13',['shoot',['../d3/dfd/class_board.html#a9ac73a1617135ad5affd1768b7f37c67',1,'Board']]],
-  ['size_14',['size',['../d6/d9c/struct_ship_type.html#a07aec8ecead8e054e996a42e63c2f289',1,'ShipType']]]
+  ['ships_11',['ships',['../d3/dfd/class_board.html#a199f84459db5d0409a4c1ce2950308fe',1,'Board']]],
+  ['shiptype_12',['ShipType',['../d6/d9c/struct_ship_type.html',1,'']]],
+  ['shiptypes_13',['ShipTypes',['../d0/d58/class_ship_types.html',1,'']]],
+  ['shoot_14',['shoot',['../d3/dfd/class_board.html#a9ac73a1617135ad5affd1768b7f37c67',1,'Board']]],
+  ['shots_15',['shots',['../d3/dfd/class_board.html#a9d79c06329985f72245ae66608700ccd',1,'Board']]],
+  ['size_16',['size',['../d6/d9c/struct_ship_type.html#a07aec8ecead8e054e996a42e63c2f289',1,'ShipType']]]
 ];

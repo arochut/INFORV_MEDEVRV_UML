@@ -1,0 +1,8 @@
+<map id="Board::all_boats_dead" name="Board::all_boats_dead">
+<area shape="rect" id="Node000001" title="Check if the game is over." alt="" coords="396,31,546,57"/>
+<area shape="rect" id="Node000002" href="$db/d10/class_game_manager.html#a4df628a302b74dbef0035d2df7bc24a1" title="Check if the game is over." alt="" coords="192,5,348,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="380,35,348,31,349,26,381,30"/>
+<area shape="rect" id="Node000003" href="$db/d10/class_game_manager.html#a567d2f96fbe4dfacf81c738e5d8ed716" title="Play a game of battleship." alt="" coords="5,31,144,57"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="380,47,144,47,144,41,380,41"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="177,33,144,38,143,32,176,28"/>
+</map>

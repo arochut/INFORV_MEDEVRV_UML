@@ -7,7 +7,7 @@
 
 /// @brief Class that manages the game
 class GameManager{
-
+public:
     /// @brief boardA is the board of player A
     Board boardA;
     /// @brief boardB is the board of player B
@@ -48,6 +48,7 @@ public:
     /// @param _turn the bool to set as a_to_play (true for player A, false for player B)
     void set_turn(bool _turn);
 
+    void clear();
 };
 
 #endif

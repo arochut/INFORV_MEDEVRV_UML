@@ -13,34 +13,35 @@
 \DoxyCodeLine{00009\ }
 \DoxyCodeLine{00010\ }
 \DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_board}{Board}}\{\ }
-\DoxyCodeLine{00014\ \ \ \ \ list<Ship>\ ships;}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00018\ \ \ \ \ vector<vector<int>>\ shots;}
-\DoxyCodeLine{00019\ \ \ \ \ }
-\DoxyCodeLine{00020\ public\ :}
-\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_board_a9ee491d4fea680cf69b033374a9fdfcb}{Board}}();}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_board_aabd05db8af4172bb38c40953ce6b6269}{all\_boats\_dead}}();}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_board_a9ac73a1617135ad5affd1768b7f37c67}{shoot}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_board_a4973a82918d1650b65f2205b0bc15625}{case\_vide}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
-\DoxyCodeLine{00039\ \ \ \ \ }
-\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_board_aa8f12f645cbd3ce67bcedf84e362ddb5}{display\_own}}();}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_board_a0d6f8d09e71cf589e7ace0e1c2e2bf2d}{display\_for\_opponent}}();}
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00048\ \ \ \ \ list<Ship>\ \mbox{\hyperlink{class_board_a7ab05ceeaab301f70dda313c62d003d3}{get\_ships}}();}
-\DoxyCodeLine{00049\ }
-\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_board_acd9bad766a00de24f4c5232b6334ecf2}{set\_ships}}(list<Ship>\ \_ships);}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_board_a7cbd4f42a1f08b32a56a039f9f8bd9ae}{add\_ship}}(\mbox{\hyperlink{class_ship}{Ship}}*\ ship);}
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_board_af696c05f7c21ef9c81069def67aa73d3}{can\_place\_ship}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ size,\ Direction\ dir);}
-\DoxyCodeLine{00064\ }
-\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{static}\ pair<int,\ int>\ \mbox{\hyperlink{class_board_a401955ce815582367c56fe855b6349a7}{get\_coords}}(\textcolor{keywordtype}{string}\ coord);}
-\DoxyCodeLine{00069\ \};}
-\DoxyCodeLine{00070\ }
-\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BOARD\_H}}
+\DoxyCodeLine{00013\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00015\ \ \ \ \ list<Ship>\ \mbox{\hyperlink{class_board_a199f84459db5d0409a4c1ce2950308fe}{ships}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00019\ \ \ \ \ vector<vector<int>>\ \mbox{\hyperlink{class_board_a9d79c06329985f72245ae66608700ccd}{shots}};}
+\DoxyCodeLine{00020\ \ \ \ \ }
+\DoxyCodeLine{00021\ public\ :}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_board_a9ee491d4fea680cf69b033374a9fdfcb}{Board}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_board_aabd05db8af4172bb38c40953ce6b6269}{all\_boats\_dead}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_board_a9ac73a1617135ad5affd1768b7f37c67}{shoot}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_board_a4973a82918d1650b65f2205b0bc15625}{case\_vide}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00040\ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_board_aa8f12f645cbd3ce67bcedf84e362ddb5}{display\_own}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_board_a0d6f8d09e71cf589e7ace0e1c2e2bf2d}{display\_for\_opponent}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00049\ \ \ \ \ list<Ship>\ \mbox{\hyperlink{class_board_a7ab05ceeaab301f70dda313c62d003d3}{get\_ships}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_board_acd9bad766a00de24f4c5232b6334ecf2}{set\_ships}}(list<Ship>\ \_ships);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_board_a7cbd4f42a1f08b32a56a039f9f8bd9ae}{add\_ship}}(\mbox{\hyperlink{class_ship}{Ship}}*\ ship);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_board_af696c05f7c21ef9c81069def67aa73d3}{can\_place\_ship}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ size,\ Direction\ dir);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{static}\ pair<int,\ int>\ \mbox{\hyperlink{class_board_a401955ce815582367c56fe855b6349a7}{get\_coords}}(\textcolor{keywordtype}{string}\ coord);}
+\DoxyCodeLine{00070\ \};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BOARD\_H}}
 
 \end{DoxyCode}

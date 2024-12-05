@@ -9,6 +9,16 @@ Class that manages the game.
 
 {\ttfamily \#include $<$Game\+Manager.\+h$>$}
 
+
+
+Collaboration diagram for Game\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{da/d7e/class_game_manager__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -32,7 +42,22 @@ void \mbox{\hyperlink{class_game_manager_ac23ebda463fbbec8aa754dfa3651d084}{set\
 bool \mbox{\hyperlink{class_game_manager_acfe80335d4789d8bedddb6204faf636f}{get\+\_\+turn}} ()
 \begin{DoxyCompactList}\small\item\em Get the a\+\_\+to\+\_\+play object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_game_manager_a99751c17fb8a4e7b0e27da927506ee5e}{set\+\_\+turn}} (bool \+\_\+turn)
-\begin{DoxyCompactList}\small\item\em Set the a\+\_\+to\+\_\+play bool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Set the a\+\_\+to\+\_\+play bool. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_manager_a74fc72a5dea8ebcbf8074dca8eda89ac}\label{class_game_manager_a74fc72a5dea8ebcbf8074dca8eda89ac} 
+void {\bfseries clear} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_manager_a40e534528c5c9eafd0a1dc1c6c1ddd0a}\label{class_game_manager_a40e534528c5c9eafd0a1dc1c6c1ddd0a} 
+\mbox{\hyperlink{class_board}{Board}} {\bfseries boardA}
+\begin{DoxyCompactList}\small\item\em boardA is the board of player A \end{DoxyCompactList}\item 
+\Hypertarget{class_game_manager_aa15322e3bef9763934fc79212f7d244c}\label{class_game_manager_aa15322e3bef9763934fc79212f7d244c} 
+\mbox{\hyperlink{class_board}{Board}} {\bfseries boardB}
+\begin{DoxyCompactList}\small\item\em boardB is the board of player B \end{DoxyCompactList}\item 
+\Hypertarget{class_game_manager_a028ebaafdd59de151e2257adc72dc289}\label{class_game_manager_a028ebaafdd59de151e2257adc72dc289} 
+bool {\bfseries a\+\_\+to\+\_\+play}
+\begin{DoxyCompactList}\small\item\em a\+\_\+to\+\_\+play is a boolean that indicates if it is player A\textquotesingle{}s turn (otherwise it is player B) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}

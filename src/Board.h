@@ -10,6 +10,7 @@
 
 /// @brief Class that represents a board
 class Board{ 
+protected:
     /// @brief ships is a list of ships on the board
     list<Ship> ships;
 

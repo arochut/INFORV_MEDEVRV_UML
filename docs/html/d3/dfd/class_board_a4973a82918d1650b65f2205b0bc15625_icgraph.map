@@ -1,0 +1,9 @@
+<map id="Board::case_vide" name="Board::case_vide">
+<area shape="rect" id="Node000001" title="Check if a certain position is empty." alt="" coords="393,31,515,57"/>
+<area shape="rect" id="Node000002" href="$d3/dfd/class_board.html#af696c05f7c21ef9c81069def67aa73d3" title="Check if a ship can be placed at a certain position." alt="" coords="192,5,345,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="377,36,345,32,346,27,378,31"/>
+<area shape="rect" id="Node000003" href="$d3/dfd/class_board.html#aa8f12f645cbd3ce67bcedf84e362ddb5" title="Display the board for the player." alt="" coords="201,56,336,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="378,57,337,63,336,57,377,52"/>
+<area shape="rect" id="Node000004" href="$db/d10/class_game_manager.html#a567d2f96fbe4dfacf81c738e5d8ed716" title="Play a game of battleship." alt="" coords="5,56,144,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="185,72,144,72,144,67,185,67"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Board::can_place_ship" name="Board::can_place_ship">
+<area shape="rect" id="Node000001" title="Check if a ship can be placed at a certain position." alt="" coords="5,5,159,32"/>
+<area shape="rect" id="Node000002" href="$d3/dfd/class_board.html#a4973a82918d1650b65f2205b0bc15625" title="Check if a certain position is empty." alt="" coords="207,5,329,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,16,191,16,191,21,159,21"/>
+</map>

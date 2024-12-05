@@ -1,0 +1,5 @@
+<map id="Board::shoot" name="Board::shoot">
+<area shape="rect" id="Node000001" title="Shoot at a certain position." alt="" coords="5,13,101,40"/>
+<area shape="rect" id="Node000002" href="$d3/dfd/class_board.html#a0d6f8d09e71cf589e7ace0e1c2e2bf2d" title="Display the board for the opponent (without ships displayed, only shots)" alt="" coords="149,5,275,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,24,133,24,133,29,101,29"/>
+</map>

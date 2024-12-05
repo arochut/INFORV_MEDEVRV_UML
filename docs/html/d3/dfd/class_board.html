@@ -88,6 +88,7 @@ $(function(){ initResizable(false); });
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="../../d1/d42/class_board-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Board Class Reference</div></div>
 </div><!--header-->
@@ -97,6 +98,14 @@ $(function(){ initResizable(false); });
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../de/ded/_board_8h_source.html">Board.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Board:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/d1a/class_board__coll__graph.png" border="0" usemap="#a_board_coll__map" alt="Collaboration graph"/></div>
+<map name="a_board_coll__map" id="a_board_coll__map">
+<area shape="rect" title="Class that represents a board." alt="" coords="5,5,188,437"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -139,6 +148,17 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a401955ce815582367c56fe855b6349a7" id="r_a401955ce815582367c56fe855b6349a7"><td class="memItemLeft" align="right" valign="top">static pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a401955ce815582367c56fe855b6349a7">get_coords</a> (string coord)</td></tr>
 <tr class="memdesc:a401955ce815582367c56fe855b6349a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pair of coordinates from a string.  <br /></td></tr>
 <tr class="separator:a401955ce815582367c56fe855b6349a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a199f84459db5d0409a4c1ce2950308fe" id="r_a199f84459db5d0409a4c1ce2950308fe"><td class="memItemLeft" align="right" valign="top"><a id="a199f84459db5d0409a4c1ce2950308fe" name="a199f84459db5d0409a4c1ce2950308fe"></a>
+list&lt; <a class="el" href="../../d3/d1d/class_ship.html">Ship</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ships</b></td></tr>
+<tr class="memdesc:a199f84459db5d0409a4c1ce2950308fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">ships is a list of ships on the board <br /></td></tr>
+<tr class="separator:a199f84459db5d0409a4c1ce2950308fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d79c06329985f72245ae66608700ccd" id="r_a9d79c06329985f72245ae66608700ccd"><td class="memItemLeft" align="right" valign="top"><a id="a9d79c06329985f72245ae66608700ccd" name="a9d79c06329985f72245ae66608700ccd"></a>
+vector&lt; vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>shots</b></td></tr>
+<tr class="memdesc:a9d79c06329985f72245ae66608700ccd"><td class="mdescLeft">&#160;</td><td class="mdescRight">shots is a matrix of shots on the board 0 : empty, 1 : miss, 2 : hit <br /></td></tr>
+<tr class="separator:a9d79c06329985f72245ae66608700ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class that represents a board. </p>
@@ -185,6 +205,19 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Check if the game is over. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the game is over, false otherwise </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d3/dfd/class_board_aabd05db8af4172bb38c40953ce6b6269_icgraph.png" border="0" usemap="#ad3/dfd/class_board_aabd05db8af4172bb38c40953ce6b6269_icgraph" alt=""/></div>
+<map name="ad3/dfd/class_board_aabd05db8af4172bb38c40953ce6b6269_icgraph" id="ad3/dfd/class_board_aabd05db8af4172bb38c40953ce6b6269_icgraph">
+<area shape="rect" title="Check if the game is over." alt="" coords="396,31,546,57"/>
+<area shape="rect" href="../../db/d10/class_game_manager.html#a4df628a302b74dbef0035d2df7bc24a1" title="Check if the game is over." alt="" coords="192,5,348,32"/>
+<area shape="poly" title=" " alt="" coords="380,35,348,31,349,26,381,30"/>
+<area shape="rect" href="../../db/d10/class_game_manager.html#a567d2f96fbe4dfacf81c738e5d8ed716" title="Play a game of battleship." alt="" coords="5,31,144,57"/>
+<area shape="poly" title=" " alt="" coords="380,47,144,47,144,41,380,41"/>
+<area shape="poly" title=" " alt="" coords="177,33,144,38,143,32,176,28"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -227,6 +260,16 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d3/dfd/class_board_af696c05f7c21ef9c81069def67aa73d3_cgraph.png" border="0" usemap="#ad3/dfd/class_board_af696c05f7c21ef9c81069def67aa73d3_cgraph" alt=""/></div>
+<map name="ad3/dfd/class_board_af696c05f7c21ef9c81069def67aa73d3_cgraph" id="ad3/dfd/class_board_af696c05f7c21ef9c81069def67aa73d3_cgraph">
+<area shape="rect" title="Check if a ship can be placed at a certain position." alt="" coords="5,5,159,32"/>
+<area shape="rect" href="../../d3/dfd/class_board.html#a4973a82918d1650b65f2205b0bc15625" title="Check if a certain position is empty." alt="" coords="207,5,329,32"/>
+<area shape="poly" title=" " alt="" coords="159,16,191,16,191,21,159,21"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -258,6 +301,20 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the position is empty, false otherwise </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d3/dfd/class_board_a4973a82918d1650b65f2205b0bc15625_icgraph.png" border="0" usemap="#ad3/dfd/class_board_a4973a82918d1650b65f2205b0bc15625_icgraph" alt=""/></div>
+<map name="ad3/dfd/class_board_a4973a82918d1650b65f2205b0bc15625_icgraph" id="ad3/dfd/class_board_a4973a82918d1650b65f2205b0bc15625_icgraph">
+<area shape="rect" title="Check if a certain position is empty." alt="" coords="393,31,515,57"/>
+<area shape="rect" href="../../d3/dfd/class_board.html#af696c05f7c21ef9c81069def67aa73d3" title="Check if a ship can be placed at a certain position." alt="" coords="192,5,345,32"/>
+<area shape="poly" title=" " alt="" coords="377,36,345,32,346,27,378,31"/>
+<area shape="rect" href="../../d3/dfd/class_board.html#aa8f12f645cbd3ce67bcedf84e362ddb5" title="Display the board for the player." alt="" coords="201,56,336,83"/>
+<area shape="poly" title=" " alt="" coords="378,57,337,63,336,57,377,52"/>
+<area shape="rect" href="../../db/d10/class_game_manager.html#a567d2f96fbe4dfacf81c738e5d8ed716" title="Play a game of battleship." alt="" coords="5,56,144,83"/>
+<area shape="poly" title=" " alt="" coords="185,72,144,72,144,67,185,67"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -300,6 +357,16 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>pair&lt;int, int&gt; pair of ints </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d3/dfd/class_board_a401955ce815582367c56fe855b6349a7_icgraph.png" border="0" usemap="#ad3/dfd/class_board_a401955ce815582367c56fe855b6349a7_icgraph" alt=""/></div>
+<map name="ad3/dfd/class_board_a401955ce815582367c56fe855b6349a7_icgraph" id="ad3/dfd/class_board_a401955ce815582367c56fe855b6349a7_icgraph">
+<area shape="rect" title="Get a pair of coordinates from a string." alt="" coords="192,5,319,32"/>
+<area shape="rect" href="../../db/d10/class_game_manager.html#a567d2f96fbe4dfacf81c738e5d8ed716" title="Play a game of battleship." alt="" coords="5,5,144,32"/>
+<area shape="poly" title=" " alt="" coords="176,21,144,21,144,16,176,16"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -376,6 +443,26 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if a ship is hit at the position, false otherwise </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d3/dfd/class_board_a9ac73a1617135ad5affd1768b7f37c67_cgraph.png" border="0" usemap="#ad3/dfd/class_board_a9ac73a1617135ad5affd1768b7f37c67_cgraph" alt=""/></div>
+<map name="ad3/dfd/class_board_a9ac73a1617135ad5affd1768b7f37c67_cgraph" id="ad3/dfd/class_board_a9ac73a1617135ad5affd1768b7f37c67_cgraph">
+<area shape="rect" title="Shoot at a certain position." alt="" coords="5,13,101,40"/>
+<area shape="rect" href="../../d3/dfd/class_board.html#a0d6f8d09e71cf589e7ace0e1c2e2bf2d" title="Display the board for the opponent (without ships displayed, only shots)" alt="" coords="149,5,275,48"/>
+<area shape="poly" title=" " alt="" coords="101,24,133,24,133,29,101,29"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d3/dfd/class_board_a9ac73a1617135ad5affd1768b7f37c67_icgraph.png" border="0" usemap="#ad3/dfd/class_board_a9ac73a1617135ad5affd1768b7f37c67_icgraph" alt=""/></div>
+<map name="ad3/dfd/class_board_a9ac73a1617135ad5affd1768b7f37c67_icgraph" id="ad3/dfd/class_board_a9ac73a1617135ad5affd1768b7f37c67_icgraph">
+<area shape="rect" title="Shoot at a certain position." alt="" coords="192,5,287,32"/>
+<area shape="rect" href="../../db/d10/class_game_manager.html#a567d2f96fbe4dfacf81c738e5d8ed716" title="Play a game of battleship." alt="" coords="5,5,144,32"/>
+<area shape="poly" title=" " alt="" coords="176,21,144,21,144,16,176,16"/>
+</map>
+</div>
 
 </div>
 </div>

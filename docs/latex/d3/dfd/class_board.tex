@@ -9,6 +9,16 @@ Class that represents a board.
 
 {\ttfamily \#include $<$Board.\+h$>$}
 
+
+
+Collaboration diagram for Board\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{de/d1a/class_board__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -40,6 +50,15 @@ bool \mbox{\hyperlink{class_board_af696c05f7c21ef9c81069def67aa73d3}{can\+\_\+pl
 \item 
 static pair$<$ int, int $>$ \mbox{\hyperlink{class_board_a401955ce815582367c56fe855b6349a7}{get\+\_\+coords}} (string coord)
 \begin{DoxyCompactList}\small\item\em Get a pair of coordinates from a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_board_a199f84459db5d0409a4c1ce2950308fe}\label{class_board_a199f84459db5d0409a4c1ce2950308fe} 
+list$<$ \mbox{\hyperlink{class_ship}{Ship}} $>$ {\bfseries ships}
+\begin{DoxyCompactList}\small\item\em ships is a list of ships on the board \end{DoxyCompactList}\item 
+\Hypertarget{class_board_a9d79c06329985f72245ae66608700ccd}\label{class_board_a9d79c06329985f72245ae66608700ccd} 
+vector$<$ vector$<$ int $>$ $>$ {\bfseries shots}
+\begin{DoxyCompactList}\small\item\em shots is a matrix of shots on the board 0 \+: empty, 1 \+: miss, 2 \+: hit \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -74,6 +93,13 @@ Check if the game is over.
 \begin{DoxyReturn}{Returns}
 true if the game is over, false otherwise 
 \end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/dfd/class_board_aabd05db8af4172bb38c40953ce6b6269_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{class_board_af696c05f7c21ef9c81069def67aa73d3}\index{Board@{Board}!can\_place\_ship@{can\_place\_ship}}
 \index{can\_place\_ship@{can\_place\_ship}!Board@{Board}}
 \doxysubsubsection{\texorpdfstring{can\_place\_ship()}{can\_place\_ship()}}
@@ -95,6 +121,13 @@ Check if a ship can be placed at a certain position.
 {\em dir} & the direction of the ship \\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{d3/dfd/class_board_af696c05f7c21ef9c81069def67aa73d3_cgraph}
+\end{center}
+\end{figure}
 \Hypertarget{class_board_a4973a82918d1650b65f2205b0bc15625}\index{Board@{Board}!case\_vide@{case\_vide}}
 \index{case\_vide@{case\_vide}!Board@{Board}}
 \doxysubsubsection{\texorpdfstring{case\_vide()}{case\_vide()}}
@@ -115,6 +148,13 @@ Check if a certain position is empty.
 \begin{DoxyReturn}{Returns}
 true if the position is empty, false otherwise 
 \end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/dfd/class_board_a4973a82918d1650b65f2205b0bc15625_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{class_board_a401955ce815582367c56fe855b6349a7}\index{Board@{Board}!get\_coords@{get\_coords}}
 \index{get\_coords@{get\_coords}!Board@{Board}}
 \doxysubsubsection{\texorpdfstring{get\_coords()}{get\_coords()}}
@@ -143,6 +183,13 @@ pair$<$int, int$>$ the pair of coordinates ( "{}\+D4"{} -\/\texorpdfstring{$>$}{
 \begin{DoxyReturn}{Returns}
 pair$<$int, int$>$ pair of ints 
 \end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{d3/dfd/class_board_a401955ce815582367c56fe855b6349a7_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{class_board_a7ab05ceeaab301f70dda313c62d003d3}\index{Board@{Board}!get\_ships@{get\_ships}}
 \index{get\_ships@{get\_ships}!Board@{Board}}
 \doxysubsubsection{\texorpdfstring{get\_ships()}{get\_ships()}}
@@ -191,6 +238,20 @@ Shoot at a certain position.
 \begin{DoxyReturn}{Returns}
 true if a ship is hit at the position, false otherwise 
 \end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{d3/dfd/class_board_a9ac73a1617135ad5affd1768b7f37c67_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{d3/dfd/class_board_a9ac73a1617135ad5affd1768b7f37c67_icgraph}
+\end{center}
+\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
