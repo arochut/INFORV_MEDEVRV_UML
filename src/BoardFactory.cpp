@@ -13,20 +13,24 @@ void BoardFactory::place_ship(Board& board, ShipType type) {
     pair<int, int> xy = make_pair(-1, -1);
     Direction dir;
     while(!input_correct)  {
-    cout << "Ou voulez-vous placer votre " << type.name << " (taille " << type.size << ") ?" << endl;
-    board.display_own();
-    cout << "Entrez les coordonnées sous la forme 'B4' :" << endl;
+        cout << "Ou voulez-vous placer votre " << type.name << " (taille " << type.size << ") ?" << endl;
+        board.display_own();
+        cout << "Entrez les coordonnées sous la forme 'B4' :" << endl;
         string coord;
         cin >> coord;
         char d;
-    cout << "Entrez la direction du bateau (h pour horizontal, v pour vertical) :" << endl;
+        cout << "Entrez la direction du bateau (h pour horizontal, v pour vertical) :" << endl;
         cin >> d;
         xy = Board::get_coords(coord);
-        if (xy.first != -1 && xy.second != -1) {
+
+        // Verification of entered coords
+        if (xy.first != -1 && xy.second != -1 && xy.first < 10 && xy.second < 10) {
             input_correct = true;
         } else {
             cout << "Coordonnées invalides" << endl;
         }
+
+        // Selecting the direction with the h or v input
         if (d == 'h') {
             dir = Direction::Horizontal;
         } else if (d == 'v') {
@@ -44,8 +48,9 @@ void BoardFactory::place_ship(Board& board, ShipType type) {
                 cout << "Impossible de placer le bateau ici" << endl;
                 input_correct = false;
             }
-        }
     }
+}
+
 void BoardFactory::place_all_ships(Board& board) {
     for (int i = 0; i < ShipTypes::SHIP_COUNT; i++) {
         place_ship(board, ShipTypes::SHIP_TYPES[i]);

@@ -107,20 +107,31 @@ void Board::add_ship(Ship* ship)
 }
 
 bool Board::can_place_ship(int x, int y, int size, Direction dir)
-{
+{   
+    // Cas horizontal
     if (dir == Direction::Horizontal){
-        if (x+size-1>10){
+
+        // On vérifie que le bateau rentre dans le board
+        if (x+size-1>=10){
             return false;
         }
+
+        // On vérifie si ça chevauche d'autres bateaux
         for (int i=0; i<size; i++){
             if (!case_vide(x+i,y)){
                 return false;
             }
         }
+
+    // Cas vertical
     } else {
-        if (y+size-1>10){
+
+        // On vérifie que le bateau rentre dans le board
+        if (y+size-1>=10){
             return false;
         }
+
+        // On vérifie si ça chevauche d'autres bateaux
         for (int i=0; i<size; i++){
             if (!case_vide(x,y+i)){
                 return false;
