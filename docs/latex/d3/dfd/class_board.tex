@@ -15,7 +15,7 @@ Class that represents a board.
 \Hypertarget{class_board_a9ee491d4fea680cf69b033374a9fdfcb}\label{class_board_a9ee491d4fea680cf69b033374a9fdfcb} 
 {\bfseries Board} ()
 \begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_board}{Board} object. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_board_a7e1a5af0dda9fd06eff66b2c2d0a0bbc}{is\+\_\+over}} ()
+bool \mbox{\hyperlink{class_board_aabd05db8af4172bb38c40953ce6b6269}{all\+\_\+boats\+\_\+dead}} ()
 \begin{DoxyCompactList}\small\item\em Check if the game is over. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_board_a9ac73a1617135ad5affd1768b7f37c67}{shoot}} (int x, int y)
 \begin{DoxyCompactList}\small\item\em Shoot at a certain position. \end{DoxyCompactList}\item 
@@ -61,6 +61,19 @@ Add a ship to the board.
 {\em ship} & the ship to add \\
 \hline
 \end{DoxyParams}
+\Hypertarget{class_board_aabd05db8af4172bb38c40953ce6b6269}\index{Board@{Board}!all\_boats\_dead@{all\_boats\_dead}}
+\index{all\_boats\_dead@{all\_boats\_dead}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{all\_boats\_dead()}{all\_boats\_dead()}}
+{\footnotesize\ttfamily \label{class_board_aabd05db8af4172bb38c40953ce6b6269} 
+bool Board\+::all\+\_\+boats\+\_\+dead (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Check if the game is over. 
+
+\begin{DoxyReturn}{Returns}
+true if the game is over, false otherwise 
+\end{DoxyReturn}
 \Hypertarget{class_board_af696c05f7c21ef9c81069def67aa73d3}\index{Board@{Board}!can\_place\_ship@{can\_place\_ship}}
 \index{can\_place\_ship@{can\_place\_ship}!Board@{Board}}
 \doxysubsubsection{\texorpdfstring{can\_place\_ship()}{can\_place\_ship()}}
@@ -112,13 +125,23 @@ pair$<$ int, int $>$ Board\+::get\+\_\+coords (\begin{DoxyParamCaption}\item[{st
 
 Get a pair of coordinates from a string. 
 
+Returns a pair of ints from a string of coordinates (ex \+: "{}\+A4"{} -\/\texorpdfstring{$>$}{>} (4,1))
+
 
 \begin{DoxyParams}{Parameters}
 {\em coord} & the string to convert (ex \+: "{}\+D4"{}) \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-pair$<$int, int$>$ the pair of coordinates ( "{}\+D4"{} -\/\texorpdfstring{$>$}{>} (4,4) ) 
+pair$<$int, int$>$ the pair of coordinates ( "{}\+D4"{} -\/\texorpdfstring{$>$}{>} (4,4) )
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em coord} & string of coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pair$<$int, int$>$ pair of ints 
 \end{DoxyReturn}
 \Hypertarget{class_board_a7ab05ceeaab301f70dda313c62d003d3}\index{Board@{Board}!get\_ships@{get\_ships}}
 \index{get\_ships@{get\_ships}!Board@{Board}}
@@ -132,19 +155,6 @@ Get the ships object.
 
 \begin{DoxyReturn}{Returns}
 list$<$\+Ship$>$ the list of ships on the board 
-\end{DoxyReturn}
-\Hypertarget{class_board_a7e1a5af0dda9fd06eff66b2c2d0a0bbc}\index{Board@{Board}!is\_over@{is\_over}}
-\index{is\_over@{is\_over}!Board@{Board}}
-\doxysubsubsection{\texorpdfstring{is\_over()}{is\_over()}}
-{\footnotesize\ttfamily \label{class_board_a7e1a5af0dda9fd06eff66b2c2d0a0bbc} 
-bool Board\+::is\+\_\+over (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
-
-
-
-Check if the game is over. 
-
-\begin{DoxyReturn}{Returns}
-true if the game is over, false otherwise 
 \end{DoxyReturn}
 \Hypertarget{class_board_acd9bad766a00de24f4c5232b6334ecf2}\index{Board@{Board}!set\_ships@{set\_ships}}
 \index{set\_ships@{set\_ships}!Board@{Board}}

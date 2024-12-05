@@ -22,19 +22,21 @@ void GameManager::play()
             cout << "Au tour du joueur A"<< endl;
             cout << "Ton plateau"<< endl;
             boardA.display_own();
-            cout << "Le platau adverse"<< endl;
+            cout << "Le plateau adverse"<< endl;
             boardB.display_for_opponent();
         }else {
             cout << "Au tour du joueur B"<< endl;
             cout << "Ton plateau"<< endl;
             boardB.display_own();
-            cout << "Le platau adverse"<< endl;
+            cout << "Le plateau adverse"<< endl;
             boardA.display_for_opponent();
         }
         cout << "Entrer la case visée (ex : D4)" <<endl;
         cin >> bullet;
-        int x = bullet[0] - 'A' + 1;
-        int y = bullet[1] - '0';
+        pair<int, int> coord = Board::get_coords(bullet);
+        int x = coord.first;
+        int y = coord.second;
+
         if (a_to_play){
             boardB.shoot(x,y);
         }else {
@@ -43,7 +45,11 @@ void GameManager::play()
         cout << "Fin du tour"<< endl;
         a_to_play=!a_to_play;
     }
-
+    if (boardA.all_boats_dead()){
+        cout << "Le joueur B a gagné"<< endl;
+    } else {
+        cout << "Le joueur A a gagné"<< endl;
+    }
     cout << "Fin de la partie"<< endl;
 }
 

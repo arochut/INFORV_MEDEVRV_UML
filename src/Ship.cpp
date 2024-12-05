@@ -23,7 +23,7 @@ bool Ship::is_dead() {
 }
 
 bool Ship::occupies(int x, int y) {
-    if (dir == Direction::Vertical) {
+    if (dir == Direction::Horizontal) {
         if (x < x_start || x >= x_start + size) {
             return false;
         }
@@ -50,16 +50,7 @@ bool Ship::hit(int x, int y) {
 
 bool Ship::is_hit(int x, int y)
 {
-    if (!occupies(x, y)) {
-        return false;
-    }
-    if (dir == Direction::Horizontal and hits[x - x_start] == true) {
-        return true;
-    } else {
-        if (hits[y - y_start] == true){
-            return true;
-        }
-    }
+    // TODO rework
     return false;
 }
 

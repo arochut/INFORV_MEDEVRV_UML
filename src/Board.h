@@ -14,6 +14,7 @@ class Board{
     list<Ship> ships;
 
     /// @brief shots is a matrix of shots on the board
+    /// 0 : empty, 1 : miss, 2 : hit
     vector<vector<int>> shots;
     
 public :

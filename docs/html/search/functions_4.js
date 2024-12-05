@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['gamemanager_0',['GameManager',['../db/d10/class_game_manager.html#aa0e2424dc1a39d380e5b6605b179bf05',1,'GameManager']]],
+  ['gamemanager_0',['GameManager',['../db/d10/class_game_manager.html#ab4b0046660eb10d7db53527d8333ee31',1,'GameManager']]],
   ['get_5fboarda_1',['get_boardA',['../db/d10/class_game_manager.html#a5187716af9b8fbdf922f4b5938663a86',1,'GameManager']]],
   ['get_5fboardb_2',['get_boardB',['../db/d10/class_game_manager.html#ab0ac80a8eec374e98a6ff431278e61ba',1,'GameManager']]],
   ['get_5fcoords_3',['get_coords',['../d3/dfd/class_board.html#a401955ce815582367c56fe855b6349a7',1,'Board']]],

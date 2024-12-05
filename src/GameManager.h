@@ -21,7 +21,7 @@ public:
     /// @brief Check if the game is over
     bool is_over();
 
-    /// @brief Play a
+    /// @brief Play a game of battleship
     void play();
 
     /// @brief Get the boardA object

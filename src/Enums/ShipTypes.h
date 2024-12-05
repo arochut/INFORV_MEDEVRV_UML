@@ -25,7 +25,8 @@ class ShipTypes
         static const ShipType SUBMARINE_2;
         static const ShipType FISHING_1;
         static const ShipType FISHING_2;
-        static const int SHIP_COUNT = 2;
+        // static const int SHIP_COUNT = 2;
+        static const int SHIP_COUNT = 7;
         static const ShipType SHIP_TYPES[SHIP_COUNT];
 
     

@@ -104,9 +104,9 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Board</b> ()</td></tr>
 <tr class="memdesc:a9ee491d4fea680cf69b033374a9fdfcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="../../d3/dfd/class_board.html" title="Class that represents a board.">Board</a> object. <br /></td></tr>
 <tr class="separator:a9ee491d4fea680cf69b033374a9fdfcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e1a5af0dda9fd06eff66b2c2d0a0bbc" id="r_a7e1a5af0dda9fd06eff66b2c2d0a0bbc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e1a5af0dda9fd06eff66b2c2d0a0bbc">is_over</a> ()</td></tr>
-<tr class="memdesc:a7e1a5af0dda9fd06eff66b2c2d0a0bbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the game is over.  <br /></td></tr>
-<tr class="separator:a7e1a5af0dda9fd06eff66b2c2d0a0bbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabd05db8af4172bb38c40953ce6b6269" id="r_aabd05db8af4172bb38c40953ce6b6269"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabd05db8af4172bb38c40953ce6b6269">all_boats_dead</a> ()</td></tr>
+<tr class="memdesc:aabd05db8af4172bb38c40953ce6b6269"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the game is over.  <br /></td></tr>
+<tr class="separator:aabd05db8af4172bb38c40953ce6b6269"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ac73a1617135ad5affd1768b7f37c67" id="r_a9ac73a1617135ad5affd1768b7f37c67"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ac73a1617135ad5affd1768b7f37c67">shoot</a> (int x, int y)</td></tr>
 <tr class="memdesc:a9ac73a1617135ad5affd1768b7f37c67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shoot at a certain position.  <br /></td></tr>
 <tr class="separator:a9ac73a1617135ad5affd1768b7f37c67"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,6 +165,26 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="aabd05db8af4172bb38c40953ce6b6269" name="aabd05db8af4172bb38c40953ce6b6269"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabd05db8af4172bb38c40953ce6b6269">&#9670;&#160;</a></span>all_boats_dead()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Board::all_boats_dead </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if the game is over. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the game is over, false otherwise </dd></dl>
 
 </div>
 </div>
@@ -265,13 +285,21 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get a pair of coordinates from a string. </p>
+<p>Returns a pair of ints from a string of coordinates (ex : "A4" -&gt; (4,1))</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">coord</td><td>the string to convert (ex : "D4") </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>pair&lt;int, int&gt; the pair of coordinates ( "D4" -&gt; (4,4) ) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>pair&lt;int, int&gt; the pair of coordinates ( "D4" -&gt; (4,4) )</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coord</td><td>string of coordinates </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>pair&lt;int, int&gt; pair of ints </dd></dl>
 
 </div>
 </div>
@@ -292,26 +320,6 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Get the ships object. </p>
 <dl class="section return"><dt>Returns</dt><dd>list&lt;Ship&gt; the list of ships on the board </dd></dl>
-
-</div>
-</div>
-<a id="a7e1a5af0dda9fd06eff66b2c2d0a0bbc" name="a7e1a5af0dda9fd06eff66b2c2d0a0bbc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e1a5af0dda9fd06eff66b2c2d0a0bbc">&#9670;&#160;</a></span>is_over()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Board::is_over </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Check if the game is over. </p>
-<dl class="section return"><dt>Returns</dt><dd>true if the game is over, false otherwise </dd></dl>
 
 </div>
 </div>
