@@ -19,46 +19,55 @@ void GameManager::play()
     string bullet;
     string buffer;
     clear();
-    cout << "Bienvenue dans la bataille navale"<< endl;
-    while (!is_over()){
-        if (a_to_play){
-            cout << "Au tour du joueur A"<< endl;
-            cout << "Est-tu prêt ? Entre une touche"<<endl;
-            cin>>buffer;
-            cout << "Ton plateau"<< endl;
-            boardA.display_own();
-            cout << "Le plateau adverse"<< endl;
-            boardB.display_for_opponent();
-        }else {
-            cout << "Au tour du joueur B"<< endl;
-            cout << "Est-tu prêt ? Entre une touche"<<endl;
-            cin>>buffer;
-            cout << "Ton plateau"<< endl;
-            boardB.display_own();
-            cout << "Le plateau adverse"<< endl;
-            boardA.display_for_opponent();
-        }
-        cout << "Entrer la case visée (ex : D4)" <<endl;
+    cout << "Bienvenue dans la bataille navale" << endl;
+    while (!is_over()) {
+        string player = a_to_play ? "A" : "B";
+        Board& own_board = a_to_play ? boardA : boardB;
+        Board& opponent_board = a_to_play ? boardB : boardA;
+
+        #ifdef USE_COLOR_IN_CONSOLE
+            cout << "\033[1;31mAu tour du joueur " << player << "\033[0m" << endl;
+        #else
+            cout << "Au tour du joueur " << player << endl;
+        #endif
+
+        cout << "Es-tu pret ? Appuie sur entree pour commencer " << endl;
+        cin.get(); // Attend une seule fois l'entrée de l'utilisateur
+        cout << "Ton plateau" << endl;
+        own_board.display_own();
+        cout << "Le plateau adverse" << endl;
+        opponent_board.display_for_opponent();
+        cout << "Entrer la case visée (ex : D4)" << endl;
         cin >> bullet;
         pair<int, int> coord = Board::get_coords(bullet);
         int x = coord.first;
         int y = coord.second;
-
-        if (a_to_play){
-            boardB.shoot(x,y);
-        }else {
-            boardA.shoot(x,y);
+        if (x == -1 || y == -1){
+            cout << "Coordonnees invalides" << endl;
+            continue;
         }
-        cout << "Entre une touche pour passer"<<endl;
+        opponent_board.shoot(x, y);
+        opponent_board.display_for_opponent();
+
+        cout << "Appuye sur entree pour finir ton tour"<<endl;
+        cin.ignore();
+        cin.get();
         clear();
-        cin>>buffer;
         cout << "Fin du tour"<< endl;
         a_to_play=!a_to_play;
     }
     if (boardA.all_boats_dead()){
-        cout << "Le joueur B a gagné"<< endl;
+        #ifdef USE_COLOR_IN_CONSOLE
+            cout << "\033[1;31mLe joueur B a gagne\033[0m"<< endl;
+        #else
+            cout << "Le joueur B a gagne"<< endl;
+        #endif
     } else {
-        cout << "Le joueur A a gagné"<< endl;
+        #ifdef USE_COLOR_IN_CONSOLE
+            cout << "\033[1;31mLe joueur A a gagne\033[0m"<< endl;
+        #else
+            cout << "Le joueur A a gagne"<< endl;
+        #endif
     }
     cout << "Fin de la partie"<< endl;
 }
@@ -95,5 +104,5 @@ void GameManager::set_turn(bool _turn)
 
 
 void GameManager::clear() {
-    cout << string( 100, '\n' );
+    system("clear");
 }

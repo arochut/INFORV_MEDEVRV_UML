@@ -19,7 +19,7 @@ void BoardFactory::place_ship(Board& board, ShipType type) {
             cout << "Ou voulez-vous placer votre " << type.name << " (taille " << type.size << ") ?" << endl;
         #endif
         board.display_own();
-        cout << "Entrez les coordonnées sous la forme 'B4' :" << endl;
+        cout << "Entrez les coordonnees sous la forme 'B4' :" << endl;
         string coord;
         cin >> coord;
         char d;
@@ -29,7 +29,12 @@ void BoardFactory::place_ship(Board& board, ShipType type) {
         if (xy.first != -1 && xy.second != -1) {
             input_correct = true;
         } else {
-            cout << "Coordonnées invalides" << endl;
+            #ifdef USE_COLOR_IN_CONSOLE
+                cout << "\033[1;31mCoordonnees invalides\033[0m" << endl;
+            #else
+                cout << u8"Coordonnees invalides" << endl;
+            #endif
+                
         }
         if (d == 'h') {
             dir = Direction::Horizontal;
@@ -54,9 +59,15 @@ void BoardFactory::place_ship(Board& board, ShipType type) {
 void BoardFactory::place_all_ships(Board& board) {
     for (int i = 0; i < ShipTypes::SHIP_COUNT; i++) {
         place_ship(board, ShipTypes::SHIP_TYPES[i]);
+        system("clear");
     }
-    cout << "Tous les bateaux ont été placés" << endl;
-    cout << "Voici votre plateau de jeu :" << endl;
+    #ifdef USE_COLOR_IN_CONSOLE
+        cout << "\033[1;32mTous les bateaux sont en place\033[0m" << endl;
+        cout << "Voici votre plateau de jeu :" << endl;
+    #else
+        cout << "Tous les bateaux sont en place" << endl;
+        cout << "Voici votre plateau de jeu :" << endl;
+    #endif
     board.display_own();
 }
 

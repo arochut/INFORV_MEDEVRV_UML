@@ -26,26 +26,25 @@ bool Board::shoot(int x, int y)
             shots[x-1][y-1] = 2; // Record hit
             if (it->is_dead()){
                 #ifdef USE_COLOR_IN_CONSOLE
-                    cout << "\033[1;31mTouché-Coulé\033[0m" << endl;
+                    cout << "\033[1;31mTouche-Coule\033[0m" << endl;
                 #else
-                    cout << "Touché-Coulé" << endl;
+                    cout << "Touche-Coule" << endl;
                 #endif
             } else {
                 #ifdef USE_COLOR_IN_CONSOLE
-                    cout << "\033[1;31mTouché\033[0m" << endl;
+                    cout << "\033[1;31mTouche\033[0m" << endl;
                 #else
-                    cout << "Touché" << endl;
+                    cout << "Touche" << endl;
                 #endif
             }
-            display_for_opponent();
             return true;
         }
     }
     shots[x-1][y-1] = 1; // Record miss
     #ifdef USE_COLOR_IN_CONSOLE
-        cout << "\033[1;34mRaté\033[0m" << endl;
+        cout << "\033[1;34mRate\033[0m" << endl;
     #else
-        cout << "Raté" << endl;
+        cout << "Rate" << endl;
     #endif
     display_for_opponent();
     return false;
