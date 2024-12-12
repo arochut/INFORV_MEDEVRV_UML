@@ -25,16 +25,28 @@ bool Board::shoot(int x, int y)
         if((*it).hit(x,y)){
             shots[x-1][y-1] = 2; // Record hit
             if (it->is_dead()){
-                cout << "Touché-Coulé" << endl;
+                #ifdef USE_COLOR_IN_CONSOLE
+                    cout << "\033[1;31mTouché-Coulé\033[0m" << endl;
+                #else
+                    cout << "Touché-Coulé" << endl;
+                #endif
             } else {
-                cout << "Touché" << endl;
+                #ifdef USE_COLOR_IN_CONSOLE
+                    cout << "\033[1;31mTouché\033[0m" << endl;
+                #else
+                    cout << "Touché" << endl;
+                #endif
             }
             display_for_opponent();
             return true;
         }
     }
     shots[x-1][y-1] = 1; // Record miss
-    cout << "Raté" << endl;
+    #ifdef USE_COLOR_IN_CONSOLE
+        cout << "\033[1;34mRaté\033[0m" << endl;
+    #else
+        cout << "Raté" << endl;
+    #endif
     display_for_opponent();
     return false;
 }
@@ -60,10 +72,18 @@ void Board::display_own()
                 cout<<" |  ";
             } else {
                 if(shots[j-1][i-1] == 0){
-                    cout<<" | S";
+                    #ifdef USE_COLOR_IN_CONSOLE
+                        cout << " | \033[1;36mS\033[0m";
+                    #else
+                        cout<<" | S";
+                    #endif
                 }
                 else if(shots[j-1][i-1] == 2){
-                    cout<<" | X";
+                    #ifdef USE_COLOR_IN_CONSOLE
+                        cout << " | \033[1;31mX\033[0m";
+                    #else
+                        cout <<" | X";
+                    #endif
                 }
             }
         }    
@@ -81,9 +101,17 @@ void Board::display_for_opponent()
             if(shots[j-1][i-1] == 0){
                 cout<<" |  ";
             }else if(shots[j-1][i-1] == 1){
-                cout<<" | O";
+                #ifdef USE_COLOR_IN_CONSOLE
+                    cout << " | \033[1;34mO\033[0m";
+                #else
+                    cout<<" | O";
+                #endif
             }else{
-                cout<<" | X";
+                #ifdef USE_COLOR_IN_CONSOLE
+                    cout << " | \033[1;31mX\033[0m";
+                #else
+                    cout<<" | X";
+                #endif
             }
         }
         cout<<endl;

@@ -13,7 +13,11 @@ void BoardFactory::place_ship(Board& board, ShipType type) {
     pair<int, int> xy = make_pair(-1, -1);
     Direction dir;
     while(!input_correct)  {
-        cout << "Ou voulez-vous placer votre " << type.name << " (taille " << type.size << ") ?" << endl;
+        #ifdef USE_COLOR_IN_CONSOLE
+            cout << "Ou voulez-vous placer votre \033[1;36m" << type.name << "\033[0m (taille " << type.size << ") ?" << endl;
+        #else
+            cout << "Ou voulez-vous placer votre " << type.name << " (taille " << type.size << ") ?" << endl;
+        #endif
         board.display_own();
         cout << "Entrez les coordonnées sous la forme 'B4' :" << endl;
         string coord;

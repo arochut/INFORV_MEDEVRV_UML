@@ -18,6 +18,8 @@ include_directories(src/Enums)
 # Collect all source files in src and src/Enums
 file(GLOB_RECURSE SOURCES "src/*.cpp" "src/Enums/*.cpp" "src/*.h" "src/Enums/*.h")
 
+# Define a global variable for the source files : USE_COLOR_IN_CONSOLE
+add_compile_definitions(USE_COLOR_IN_CONSOLE) # Comment this line to disable color in console
 
 # Add source to this project's executable.
 add_executable (Battleships ${SOURCES})
