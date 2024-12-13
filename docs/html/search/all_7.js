@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name_0',['name',['../d6/d9c/struct_ship_type.html#a6fc012a10d78593b1f70debd16ef6493',1,'ShipType']]]
+  ['hit_0',['hit',['../d3/d1d/class_ship.html#a76db58fedc260807b900ff48176b0109',1,'Ship']]]
 ];

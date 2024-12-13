@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hit_0',['hit',['../d3/d1d/class_ship.html#a76db58fedc260807b900ff48176b0109',1,'Ship']]]
+  ['excalidraw_20_3a_0',['Class Diagram made on excalidraw :',['../d3/dcc/md__r_e_a_d_m_e.html#autotoc_md1',1,'']]]
 ];
