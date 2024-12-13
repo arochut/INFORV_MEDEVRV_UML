@@ -46,7 +46,6 @@ bool Board::shoot(int x, int y)
     #else
         cout << "Rate" << endl;
     #endif
-    display_for_opponent();
     return false;
 }
 
