@@ -16,8 +16,7 @@ bool GameManager::is_over()
 
 void GameManager::play()
 {
-    string bullet;
-    string buffer;
+    string target;
     clear();
     cout << "Bienvenue dans la bataille navale" << endl;
     while (!is_over()) {
@@ -38,8 +37,8 @@ void GameManager::play()
         cout << "Le plateau adverse" << endl;
         opponent_board.display_for_opponent();
         cout << "Entrer la case visée (ex : D4)" << endl;
-        cin >> bullet;
-        pair<int, int> coord = Board::get_coords(bullet);
+        cin >> target;
+        pair<int, int> coord = Board::get_coords(target);
         int x = coord.first;
         int y = coord.second;
         if (x == -1 || y == -1){
@@ -56,6 +55,7 @@ void GameManager::play()
         cout << "Fin du tour"<< endl;
         a_to_play=!a_to_play;
     }
+    // The game is over, one of the players has all his boats dead
     if (boardA.all_boats_dead()){
         #ifdef USE_COLOR_IN_CONSOLE
             cout << "\033[1;31mLe joueur B a gagne\033[0m"<< endl;
