@@ -163,11 +163,11 @@ bool Board::can_place_ship(int x, int y, int size, Direction dir)
 /// @return pair<int, int> pair of ints
 pair<int, int> Board::get_coords(string coord)
 {
-    if (coord.length() != 2){
+    if (coord.length() < 2 || coord.length() > 3){
         return make_pair(-1,-1);
     }
     int y = coord[0] - 'A' + 1;
-    int x = coord[1] - '0';
+    int x = stoi(coord.substr(1));
     if (x < 1 || x > 10 || y < 1 || y > 10){
         return make_pair(-1,-1);
     }
